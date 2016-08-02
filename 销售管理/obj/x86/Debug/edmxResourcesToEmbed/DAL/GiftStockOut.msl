@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MYDBModelStoreContainer" CdmEntityContainer="MYDBEntities1">
+    <EntitySetMapping Name="T_Customers">
+      <EntityTypeMapping TypeName="MYDBModel.T_Customers">
+        <MappingFragment StoreEntitySet="T_Customers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="BusinessContactName" ColumnName="BusinessContactName" />
+          <ScalarProperty Name="BusinessContactTel" ColumnName="BusinessContactTel" />
+          <ScalarProperty Name="BusinessContactPhone" ColumnName="BusinessContactPhone" />
+          <ScalarProperty Name="BusinessContactEmail" ColumnName="BusinessContactEmail" />
+          <ScalarProperty Name="TechContactName" ColumnName="TechContactName" />
+          <ScalarProperty Name="TechContactTel" ColumnName="TechContactTel" />
+          <ScalarProperty Name="TechContactPhone" ColumnName="TechContactPhone" />
+          <ScalarProperty Name="TechContactEmail" ColumnName="TechContactEmail" />
+          <ScalarProperty Name="OperName" ColumnName="OperName" />
+          <ScalarProperty Name="DeliverName" ColumnName="DeliverName" />
+          <ScalarProperty Name="DeliverAddress" ColumnName="DeliverAddress" />
+          <ScalarProperty Name="DeliverPhone" ColumnName="DeliverPhone" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Gifts">
+      <EntityTypeMapping TypeName="MYDBModel.T_Gifts">
+        <MappingFragment StoreEntitySet="T_Gifts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GiftName" ColumnName="GiftName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="StockNum" ColumnName="StockNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_GiftStockOut">
+      <EntityTypeMapping TypeName="MYDBModel.T_GiftStockOut">
+        <MappingFragment StoreEntitySet="T_GiftStockOut">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataDate" ColumnName="DataDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="GiftId" ColumnName="GiftId" />
+          <ScalarProperty Name="GiftName" ColumnName="GiftName" />
+          <ScalarProperty Name="GiftNum" ColumnName="GiftNum" />
+          <ScalarProperty Name="GiftPrice" ColumnName="GiftPrice" />
+          <ScalarProperty Name="GiftSum" ColumnName="GiftSum" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+          <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
+          <ScalarProperty Name="OperId" ColumnName="OperId" />
+          <ScalarProperty Name="RecDate" ColumnName="RecDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Users">
+      <EntityTypeMapping TypeName="MYDBModel.T_Users">
+        <MappingFragment StoreEntitySet="T_Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="OperRight" ColumnName="OperRight" />
+          <ScalarProperty Name="UserChar" ColumnName="UserChar" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,6 @@
+/*增加礼品使用人*/
+ALTER TABLE T_GiftStockOut ADD IntUsedID BIGINT NOT NULL DEFAULT 1
+UPDATE T_GiftStockOut SET IntUsedID=UserId
+/*增加餐费使用人*/
+ALTER TABLE T_Meals ADD IntUsedID BIGINT NOT NULL DEFAULT 1
+UPDATE T_Meals SET IntUsedID=UserId

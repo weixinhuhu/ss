@@ -1,0 +1,4 @@
+C:\Users\欣\Desktop\销售管理系统\SoftCommon\bin\x86\Release\SoftCommon.dll
+C:\Users\欣\Desktop\销售管理系统\SoftCommon\bin\x86\Release\EPPlus.dll
+C:\Users\欣\Desktop\销售管理系统\SoftCommon\bin\x86\Release\NPOI.dll
+C:\Users\欣\Desktop\销售管理系统\SoftCommon\obj\x86\Release\SoftCommon.dll

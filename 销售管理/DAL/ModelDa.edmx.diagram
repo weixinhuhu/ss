@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="40d11ec3c35047318b7df92aaff9e691" Name="Diagram1" ZoomLevel="114">
+        <EntityTypeShape EntityType="MYDBModel.DaGoods" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYDBModel.DaGoodsType" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYDBModel.DaInvoice" Width="1.5" PointX="9.875" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYDBModel.DaPurchaseContract" Width="2" PointX="7.875" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYDBModel.DaSupplier" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYDBModel.DaSupplierContact" Width="1.75" PointX="5.125" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MYDBModel.T_Users" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="MYDBModel.FK__DaGoods__IntEmpN__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="MYDBModel.FK__DaGoods__IntType__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="MYDBModel.FK__DaPurchas__IntGo__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="MYDBModel.FK__DaGoodsTy__IntEm__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="MYDBModel.FK__DaInvoice__IntEm__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="MYDBModel.FK__DaPurchas__IntEm__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="MYDBModel.FK__DaPurchas__IntSu__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="MYDBModel.FK__DaSupplie__IntEm__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="MYDBModel.FK__DaSupplie__IntSu__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="MYDBModel.FK__DaSupplie__IntEm__30F848ED" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MYDBModel.ZdContractStatu" Width="1.5" PointX="10.5" PointY="12.25" />
+        <EntityTypeShape EntityType="MYDBModel.ZdGoodsUnit" Width="1.5" PointX="5.25" PointY="4.75" />
+        <EntityTypeShape EntityType="MYDBModel.ZdInvoiceType" Width="1.5" PointX="8.5" PointY="4.875" />
+        <AssociationConnector Association="MYDBModel.FK__DaGoods__IntUnit__38996AB5" />
+        <AssociationConnector Association="MYDBModel.FK_DaPurchaseContract_ZdContractStatus" />
+        <EntityTypeShape EntityType="MYDBModel.DaGoodsSupplier" Width="1.5" PointX="3.375" PointY="7.875" />
+        <AssociationConnector Association="MYDBModel.FK__DaGoodsSu__IntGo__6EF57B66" />
+        <AssociationConnector Association="MYDBModel.FK__DaGoodsSu__IntSu__6FE99F9F" />
+        <AssociationConnector Association="MYDBModel.FK_DaGoodsType_DaGoodsType" />
+        <AssociationConnector Association="MYDBModel.FK__DaGoodsSu__IntSu__6FE99F9F1" />
+        <EntityTypeShape EntityType="MYDBModel.DaStockIn" Width="1.5" PointX="11.125" PointY="14.375" />
+        <AssociationConnector Association="MYDBModel.FK__DaStockIn__IntEm__29221CFB" />
+        <EntityTypeShape EntityType="MYDBModel.DaContractGood" Width="1.5" PointX="6.875" PointY="15.375" />
+        <AssociationConnector Association="MYDBModel.FK__DaContrac__IntCo__3B40CD36" />
+        <AssociationConnector Association="MYDBModel.FK__DaContrac__IntEm__3F115E1A" />
+        <AssociationConnector Association="MYDBModel.FK__DaContrac__IntGo__3C34F16F" />
+        <AssociationConnector Association="MYDBModel.FK__DaContrac__IntSu__3D2915A8" />
+        <AssociationConnector Association="MYDBModel.FK_DaPurchaseContract_DaSupplier" />
+        <AssociationConnector Association="MYDBModel.FK_DaInvoice_DaGoods" />
+        <AssociationConnector Association="MYDBModel.FK_DaStockIn_DaGoods" />
+        <AssociationConnector Association="MYDBModel.FK__DaInvoice__IntCo__46E78A0C1" />
+        <AssociationConnector Association="MYDBModel.FK_DaStockIn_DaPurchaseContract1" />
+        <EntityTypeShape EntityType="MYDBModel.DaCompany" Width="1.5" PointX="3" PointY="4.375" />
+        <AssociationConnector Association="MYDBModel.FK_DaCompany_T_Users" />
+        <AssociationConnector Association="MYDBModel.FK_DaPurchaseContract_DaCompany" />
+        <EntityTypeShape EntityType="MYDBModel.ZdStockInStatu" Width="1.5" PointX="13.25" PointY="15.375" />
+        <AssociationConnector Association="MYDBModel.FK_DaStockIn_ZdStockInStatus" />
+        <EntityTypeShape EntityType="MYDBModel.ZdPurchaseContractType" Width="1.5" PointX="10.625" PointY="5.5" />
+        <AssociationConnector Association="MYDBModel.FK_DaPurchaseContract_ZdPurchaseContractType" />
+        <EntityTypeShape EntityType="MYDBModel.ZdInvoiceStatu" Width="1.5" PointX="12" PointY="8" />
+        <AssociationConnector Association="MYDBModel.FK_DaInvoice_ZdInvoiceStatus" />
+        <EntityTypeShape EntityType="MYDBModel.DaExpense" Width="1.5" PointX="12.75" PointY="10.875" />
+        <EntityTypeShape EntityType="MYDBModel.ZdExpenseStatu" Width="1.5" PointX="12.375" PointY="5.375" />
+        <AssociationConnector Association="MYDBModel.FK_DaExpense_DaContractGoods" />
+        <AssociationConnector Association="MYDBModel.FK_DaExpense_DaGoods" />
+        <AssociationConnector Association="MYDBModel.FK_DaExpense_T_Users" />
+        <AssociationConnector Association="MYDBModel.FK_DaExpense_ZdExpenseStatus" />
+        <EntityTypeShape EntityType="MYDBModel.DaLoan" Width="1.5" PointX="8.875" PointY="15.375" />
+        <EntityTypeShape EntityType="MYDBModel.ZdLoanStatu" Width="1.5" PointX="9.875" PointY="19" />
+        <AssociationConnector Association="MYDBModel.FK_DaLoan_DaPurchaseContract" />
+        <AssociationConnector Association="MYDBModel.FK_DaLoan_ZdLoanStatus" />
+        <AssociationConnector Association="MYDBModel.FK_DaLoan_T_Users1" />
+        <EntityTypeShape EntityType="MYDBModel.DaExpenseAuditLog" Width="1.5" PointX="15" PointY="9.25" />
+        <AssociationConnector Association="MYDBModel.FK_DaAuditLog_DaExpense" />
+        <AssociationConnector Association="MYDBModel.FK_DaAuditLog_T_Users" />
+        <AssociationConnector Association="MYDBModel.FK_DaAuditLog_ZdExpenseStatus" />
+        <EntityTypeShape EntityType="MYDBModel.DaPurchaseContractAuditLog" Width="2.625" PointX="14.75" PointY="5.125" />
+        <AssociationConnector Association="MYDBModel.FK_DaPurchaseContractAuditLog_DaPurchaseContract" />
+        <AssociationConnector Association="MYDBModel.FK_DaPurchaseContractAuditLog_T_Users" />
+        <AssociationConnector Association="MYDBModel.FK_DaPurchaseContractAuditLog_ZdContractStatus" />
+        <EntityTypeShape EntityType="MYDBModel.ZdGoodsStatu" Width="1.5" PointX="6.875" PointY="3" />
+        <AssociationConnector Association="MYDBModel.FK_DaGoods_ZdGoodsStatus" />
+        <EntityTypeShape EntityType="MYDBModel.PTDepartment" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MYDBModel.PTMenu" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MYDBModel.PTOperation" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MYDBModel.PTRole" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MYDBModel.PTzqx" Width="1.5" PointX="11.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

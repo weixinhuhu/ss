@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MYDBModelStoreContainer" CdmEntityContainer="MYDBEntities2">
+    <EntitySetMapping Name="DaGoods1">
+      <EntityTypeMapping TypeName="MYDBModel.DaGoods">
+        <MappingFragment StoreEntitySet="DaGoods">
+          <ScalarProperty Name="IntStatus" ColumnName="IntStatus" />
+          <ScalarProperty Name="MonPrice" ColumnName="MonPrice" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+          <ScalarProperty Name="VcNum" ColumnName="VcNum" />
+          <ScalarProperty Name="VcName" ColumnName="VcName" />
+          <ScalarProperty Name="IntUnit" ColumnName="IntUnit" />
+          <ScalarProperty Name="VcNorms" ColumnName="VcNorms" />
+          <ScalarProperty Name="IntTypeID" ColumnName="IntTypeID" />
+          <ScalarProperty Name="VcRemark" ColumnName="VcRemark" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaGoodsTypes">
+      <EntityTypeMapping TypeName="MYDBModel.DaGoodsType">
+        <MappingFragment StoreEntitySet="DaGoodsType">
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+          <ScalarProperty Name="VcType" ColumnName="VcType" />
+          <ScalarProperty Name="IntParentID" ColumnName="IntParentID" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaInvoices">
+      <EntityTypeMapping TypeName="MYDBModel.DaInvoice">
+        <MappingFragment StoreEntitySet="DaInvoice">
+          <ScalarProperty Name="VcStockInNo" ColumnName="VcStockInNo" />
+          <ScalarProperty Name="IntContractGoodsID" ColumnName="IntContractGoodsID" />
+          <ScalarProperty Name="IntGoodsID" ColumnName="IntGoodsID" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+          <ScalarProperty Name="VcNum" ColumnName="VcNum" />
+          <ScalarProperty Name="VcUnit" ColumnName="VcUnit" />
+          <ScalarProperty Name="NumCount" ColumnName="NumCount" />
+          <ScalarProperty Name="MonPrice" ColumnName="MonPrice" />
+          <ScalarProperty Name="MonSumNoTax" ColumnName="MonSumNoTax" />
+          <ScalarProperty Name="MonSum" ColumnName="MonSum" />
+          <ScalarProperty Name="IntStatus" ColumnName="IntStatus" />
+          <ScalarProperty Name="VcRemark" ColumnName="VcRemark" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaPurchaseContracts">
+      <EntityTypeMapping TypeName="MYDBModel.DaPurchaseContract">
+        <MappingFragment StoreEntitySet="DaPurchaseContract">
+          <ScalarProperty Name="IntCompanyID" ColumnName="IntCompanyID" />
+          <ScalarProperty Name="MonSum" ColumnName="MonSum" />
+          <ScalarProperty Name="VcApplicantDep" ColumnName="VcApplicantDep" />
+          <ScalarProperty Name="VcApplicant" ColumnName="VcApplicant" />
+          <ScalarProperty Name="IntSupplierID" ColumnName="IntSupplierID" />
+          <ScalarProperty Name="VcLinkMan" ColumnName="VcLinkMan" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+          <ScalarProperty Name="VcNum" ColumnName="VcNum" />
+          <ScalarProperty Name="VcTel" ColumnName="VcTel" />
+          <ScalarProperty Name="VcFax" ColumnName="VcFax" />
+          <ScalarProperty Name="VcMobile" ColumnName="VcMobile" />
+          <ScalarProperty Name="IntType" ColumnName="IntType" />
+          <ScalarProperty Name="VcCabinet" ColumnName="VcCabinet" />
+          <ScalarProperty Name="VcFolder" ColumnName="VcFolder" />
+          <ScalarProperty Name="IntStatus" ColumnName="IntStatus" />
+          <ScalarProperty Name="VcRemark" ColumnName="VcRemark" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaSuppliers">
+      <EntityTypeMapping TypeName="MYDBModel.DaSupplier">
+        <MappingFragment StoreEntitySet="DaSupplier">
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+          <ScalarProperty Name="VcNum" ColumnName="VcNum" />
+          <ScalarProperty Name="VcName" ColumnName="VcName" />
+          <ScalarProperty Name="VcRegCapital" ColumnName="VcRegCapital" />
+          <ScalarProperty Name="VcLegalRep" ColumnName="VcLegalRep" />
+          <ScalarProperty Name="VcTaxID" ColumnName="VcTaxID" />
+          <ScalarProperty Name="VcOpeningBank" ColumnName="VcOpeningBank" />
+          <ScalarProperty Name="VcBankAccount" ColumnName="VcBankAccount" />
+          <ScalarProperty Name="VcAddress" ColumnName="VcAddress" />
+          <ScalarProperty Name="VcWebsite" ColumnName="VcWebsite" />
+          <ScalarProperty Name="VcTel" ColumnName="VcTel" />
+          <ScalarProperty Name="VcFax" ColumnName="VcFax" />
+          <ScalarProperty Name="VcPostCode" ColumnName="VcPostCode" />
+          <ScalarProperty Name="IntStatus" ColumnName="IntStatus" />
+          <ScalarProperty Name="VcRemark" ColumnName="VcRemark" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaSupplierContacts">
+      <EntityTypeMapping TypeName="MYDBModel.DaSupplierContact">
+        <MappingFragment StoreEntitySet="DaSupplierContacts">
+          <ScalarProperty Name="IntSupplierID" ColumnName="IntSupplierID" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+          <ScalarProperty Name="VcName" ColumnName="VcName" />
+          <ScalarProperty Name="VcPost" ColumnName="VcPost" />
+          <ScalarProperty Name="VcTel" ColumnName="VcTel" />
+          <ScalarProperty Name="VcFax" ColumnName="VcFax" />
+          <ScalarProperty Name="VcMobile" ColumnName="VcMobile" />
+          <ScalarProperty Name="VcQQ" ColumnName="VcQQ" />
+          <ScalarProperty Name="VcEmail" ColumnName="VcEmail" />
+          <ScalarProperty Name="VcRemark" ColumnName="VcRemark" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Users">
+      <EntityTypeMapping TypeName="MYDBModel.T_Users">
+        <MappingFragment StoreEntitySet="T_Users">
+          <ScalarProperty Name="IntDepartmentID" ColumnName="IntDepartmentID" />
+          <ScalarProperty Name="IntRoleID" ColumnName="IntRoleID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="OperRight" ColumnName="OperRight" />
+          <ScalarProperty Name="UserChar" ColumnName="UserChar" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZdContractStatus">
+      <EntityTypeMapping TypeName="MYDBModel.ZdContractStatu">
+        <MappingFragment StoreEntitySet="ZdContractStatus">
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZdGoodsUnits">
+      <EntityTypeMapping TypeName="MYDBModel.ZdGoodsUnit">
+        <MappingFragment StoreEntitySet="ZdGoodsUnit">
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZdInvoiceTypes">
+      <EntityTypeMapping TypeName="MYDBModel.ZdInvoiceType">
+        <MappingFragment StoreEntitySet="ZdInvoiceType">
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaGoodsSuppliers">
+      <EntityTypeMapping TypeName="MYDBModel.DaGoodsSupplier">
+        <MappingFragment StoreEntitySet="DaGoodsSupplier">
+          <ScalarProperty Name="IntSuppilerID" ColumnName="IntSuppilerID" />
+          <ScalarProperty Name="IntGoodsID" ColumnName="IntGoodsID" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaStockIns">
+      <EntityTypeMapping TypeName="MYDBModel.DaStockIn">
+        <MappingFragment StoreEntitySet="DaStockIn">
+          <ScalarProperty Name="IntContractGoodsID" ColumnName="IntContractGoodsID" />
+          <ScalarProperty Name="IntGoodsID" ColumnName="IntGoodsID" />
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="VcRemark" ColumnName="VcRemark" />
+          <ScalarProperty Name="IntStatus" ColumnName="IntStatus" />
+          <ScalarProperty Name="MonSum" ColumnName="MonSum" />
+          <ScalarProperty Name="MonPrice" ColumnName="MonPrice" />
+          <ScalarProperty Name="NumCount" ColumnName="NumCount" />
+          <ScalarProperty Name="VcUnit" ColumnName="VcUnit" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaContractGoods">
+      <EntityTypeMapping TypeName="MYDBModel.DaContractGood">
+        <MappingFragment StoreEntitySet="DaContractGoods">
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="MonSum" ColumnName="MonSum" />
+          <ScalarProperty Name="NumCount" ColumnName="NumCount" />
+          <ScalarProperty Name="MonPrice" ColumnName="MonPrice" />
+          <ScalarProperty Name="IntGoodsID" ColumnName="IntGoodsID" />
+          <ScalarProperty Name="IntContractID" ColumnName="IntContractID" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaCompanies">
+      <EntityTypeMapping TypeName="MYDBModel.DaCompany">
+        <MappingFragment StoreEntitySet="DaCompany">
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="VcName" ColumnName="VcName" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZdStockInStatus">
+      <EntityTypeMapping TypeName="MYDBModel.ZdStockInStatu">
+        <MappingFragment StoreEntitySet="ZdStockInStatus">
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZdPurchaseContractTypes">
+      <EntityTypeMapping TypeName="MYDBModel.ZdPurchaseContractType">
+        <MappingFragment StoreEntitySet="ZdPurchaseContractType">
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZdInvoiceStatus">
+      <EntityTypeMapping TypeName="MYDBModel.ZdInvoiceStatu">
+        <MappingFragment StoreEntitySet="ZdInvoiceStatus">
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaExpenses">
+      <EntityTypeMapping TypeName="MYDBModel.DaExpense">
+        <MappingFragment StoreEntitySet="DaExpense">
+          <ScalarProperty Name="IntGoodsID" ColumnName="IntGoodsID" />
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="VcRemark" ColumnName="VcRemark" />
+          <ScalarProperty Name="IntStatus" ColumnName="IntStatus" />
+          <ScalarProperty Name="MonSum" ColumnName="MonSum" />
+          <ScalarProperty Name="MonPrice" ColumnName="MonPrice" />
+          <ScalarProperty Name="NumCount" ColumnName="NumCount" />
+          <ScalarProperty Name="IntContractGoodsID" ColumnName="IntContractGoodsID" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZdExpenseStatus">
+      <EntityTypeMapping TypeName="MYDBModel.ZdExpenseStatu">
+        <MappingFragment StoreEntitySet="ZdExpenseStatus">
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaLoans">
+      <EntityTypeMapping TypeName="MYDBModel.DaLoan">
+        <MappingFragment StoreEntitySet="DaLoan">
+          <ScalarProperty Name="IntEmpNum" ColumnName="IntEmpNum" />
+          <ScalarProperty Name="IntStatus" ColumnName="IntStatus" />
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="MonMoney" ColumnName="MonMoney" />
+          <ScalarProperty Name="DtLoanDate" ColumnName="DtLoanDate" />
+          <ScalarProperty Name="IntPurchaseContractID" ColumnName="IntPurchaseContractID" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZdLoanStatus">
+      <EntityTypeMapping TypeName="MYDBModel.ZdLoanStatu">
+        <MappingFragment StoreEntitySet="ZdLoanStatus">
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaExpenseAuditLogs">
+      <EntityTypeMapping TypeName="MYDBModel.DaExpenseAuditLog">
+        <MappingFragment StoreEntitySet="DaExpenseAuditLog">
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="IntUserID" ColumnName="IntUserID" />
+          <ScalarProperty Name="IntOperationID" ColumnName="IntOperationID" />
+          <ScalarProperty Name="IntExpenseID" ColumnName="IntExpenseID" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaPurchaseContractAuditLogs">
+      <EntityTypeMapping TypeName="MYDBModel.DaPurchaseContractAuditLog">
+        <MappingFragment StoreEntitySet="DaPurchaseContractAuditLog">
+          <ScalarProperty Name="DtCreate" ColumnName="DtCreate" />
+          <ScalarProperty Name="IntUserID" ColumnName="IntUserID" />
+          <ScalarProperty Name="IntOperationID" ColumnName="IntOperationID" />
+          <ScalarProperty Name="IntPurchaseContractID" ColumnName="IntPurchaseContractID" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZdGoodsStatus">
+      <EntityTypeMapping TypeName="MYDBModel.ZdGoodsStatu">
+        <MappingFragment StoreEntitySet="ZdGoodsStatus">
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PTDepartments">
+      <EntityTypeMapping TypeName="MYDBModel.PTDepartment">
+        <MappingFragment StoreEntitySet="PTDepartment">
+          <ScalarProperty Name="VcName" ColumnName="VcName" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PTMenus">
+      <EntityTypeMapping TypeName="MYDBModel.PTMenu">
+        <MappingFragment StoreEntitySet="PTMenu">
+          <ScalarProperty Name="FastStart" ColumnName="FastStart" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="BBH" ColumnName="BBH" />
+          <ScalarProperty Name="MKHSM" ColumnName="MKHSM" />
+          <ScalarProperty Name="MKWJM" ColumnName="MKWJM" />
+          <ScalarProperty Name="MKTP" ColumnName="MKTP" />
+          <ScalarProperty Name="MKFCD" ColumnName="MKFCD" />
+          <ScalarProperty Name="MKJB" ColumnName="MKJB" />
+          <ScalarProperty Name="MKMC" ColumnName="MKMC" />
+          <ScalarProperty Name="MKBH" ColumnName="MKBH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PTOperations">
+      <EntityTypeMapping TypeName="MYDBModel.PTOperation">
+        <MappingFragment StoreEntitySet="PTOperation">
+          <ScalarProperty Name="VcImagePath" ColumnName="VcImagePath" />
+          <ScalarProperty Name="VcDesc" ColumnName="VcDesc" />
+          <ScalarProperty Name="IntMenuID" ColumnName="IntMenuID" />
+          <ScalarProperty Name="IntID" ColumnName="IntID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PTRoles">
+      <EntityTypeMapping TypeName="MYDBModel.PTRole">
+        <MappingFragment StoreEntitySet="PTRole">
+          <ScalarProperty Name="ZMC" ColumnName="ZMC" />
+          <ScalarProperty Name="ZBH" ColumnName="ZBH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PTzqxes">
+      <EntityTypeMapping TypeName="MYDBModel.PTzqx">
+        <MappingFragment StoreEntitySet="PTzqx">
+          <ScalarProperty Name="IntLevel" ColumnName="IntLevel" />
+          <ScalarProperty Name="MKBH" ColumnName="MKBH" />
+          <ScalarProperty Name="RYZBH" ColumnName="RYZBH" />
+          <ScalarProperty Name="ZQXBH" ColumnName="ZQXBH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,1015 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MYDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="DaCompany">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VcName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaContractGoods">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntContractID" Type="int" Nullable="false" />
+    <Property Name="IntGoodsID" Type="int" Nullable="false" />
+    <Property Name="MonPrice" Type="money" Nullable="false" />
+    <Property Name="NumCount" Type="int" Nullable="false" />
+    <Property Name="MonSum" Type="money" Nullable="false" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaExpense">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntContractGoodsID" Type="int" Nullable="false" />
+    <Property Name="NumCount" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="MonPrice" Type="money" Nullable="false" />
+    <Property Name="MonSum" Type="money" Nullable="false" />
+    <Property Name="IntStatus" Type="int" Nullable="false" />
+    <Property Name="VcRemark" Type="varchar" MaxLength="128" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+    <Property Name="IntGoodsID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaExpenseAuditLog">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntExpenseID" Type="int" Nullable="false" />
+    <Property Name="IntOperationID" Type="int" Nullable="false" />
+    <Property Name="IntUserID" Type="bigint" Nullable="false" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="DaGoods">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VcNum" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="VcName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="IntUnit" Type="int" Nullable="false" />
+    <Property Name="MonPrice" Type="money" />
+    <Property Name="VcNorms" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="IntTypeID" Type="int" Nullable="false" />
+    <Property Name="VcRemark" Type="varchar" MaxLength="128" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+    <Property Name="IntStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="DaGoodsSupplier">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntGoodsID" Type="int" />
+    <Property Name="IntSuppilerID" Type="int" />
+  </EntityType>
+  <EntityType Name="DaGoodsType">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VcType" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="IntParentID" Type="int" Nullable="false" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaInvoice">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntContractGoodsID" Type="int" Nullable="false" />
+    <Property Name="VcNum" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="VcUnit" Type="varchar" MaxLength="16" />
+    <Property Name="NumCount" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="MonPrice" Type="money" Nullable="false" />
+    <Property Name="MonSumNoTax" Type="money" Nullable="false" />
+    <Property Name="MonSum" Type="money" Nullable="false" />
+    <Property Name="IntStatus" Type="int" Nullable="false" />
+    <Property Name="VcRemark" Type="varchar" MaxLength="128" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+    <Property Name="IntGoodsID" Type="int" Nullable="false" />
+    <Property Name="VcStockInNo" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaLoan">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntPurchaseContractID" Type="int" Nullable="false" />
+    <Property Name="DtLoanDate" Type="date" Nullable="false" />
+    <Property Name="MonMoney" Type="money" Nullable="false" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaPurchaseContract">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VcNum" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="VcLinkMan" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="VcTel" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="VcFax" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="VcMobile" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="IntType" Type="int" Nullable="false" />
+    <Property Name="VcCabinet" Type="varchar" MaxLength="32" />
+    <Property Name="VcFolder" Type="varchar" MaxLength="16" />
+    <Property Name="IntStatus" Type="int" Nullable="false" />
+    <Property Name="VcRemark" Type="varchar" MaxLength="128" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+    <Property Name="IntSupplierID" Type="int" Nullable="false" />
+    <Property Name="VcApplicant" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="VcApplicantDep" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="MonSum" Type="money" Nullable="false" />
+    <Property Name="IntCompanyID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaPurchaseContractAuditLog">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntPurchaseContractID" Type="int" Nullable="false" />
+    <Property Name="IntOperationID" Type="int" Nullable="false" />
+    <Property Name="IntUserID" Type="bigint" Nullable="false" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="DaStockIn">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntContractGoodsID" Type="int" Nullable="false" />
+    <Property Name="VcUnit" Type="varchar" MaxLength="16" />
+    <Property Name="NumCount" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="MonPrice" Type="money" Nullable="false" />
+    <Property Name="MonSum" Type="money" Nullable="false" />
+    <Property Name="IntStatus" Type="int" Nullable="false" />
+    <Property Name="VcRemark" Type="varchar" MaxLength="128" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+    <Property Name="IntGoodsID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaSupplier">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VcNum" Type="varchar" MaxLength="32" />
+    <Property Name="VcName" Type="varchar" MaxLength="32" />
+    <Property Name="VcRegCapital" Type="varchar" MaxLength="32" />
+    <Property Name="VcLegalRep" Type="varchar" MaxLength="32" />
+    <Property Name="VcTaxID" Type="varchar" MaxLength="32" />
+    <Property Name="VcOpeningBank" Type="varchar" MaxLength="64" />
+    <Property Name="VcBankAccount" Type="varchar" MaxLength="32" />
+    <Property Name="VcAddress" Type="varchar" MaxLength="64" />
+    <Property Name="VcWebsite" Type="varchar" MaxLength="32" />
+    <Property Name="VcTel" Type="varchar" MaxLength="32" />
+    <Property Name="VcFax" Type="varchar" MaxLength="32" />
+    <Property Name="VcPostCode" Type="varchar" MaxLength="16" />
+    <Property Name="IntStatus" Type="int" Nullable="false" />
+    <Property Name="VcRemark" Type="varchar" MaxLength="128" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaSupplierContacts">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IntSupplierID" Type="int" Nullable="false" />
+    <Property Name="VcName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="VcPost" Type="varchar" MaxLength="32" />
+    <Property Name="VcTel" Type="varchar" MaxLength="32" />
+    <Property Name="VcFax" Type="varchar" MaxLength="32" />
+    <Property Name="VcMobile" Type="varchar" MaxLength="32" />
+    <Property Name="VcQQ" Type="varchar" MaxLength="16" />
+    <Property Name="VcEmail" Type="varchar" MaxLength="32" />
+    <Property Name="VcRemark" Type="varchar" MaxLength="128" />
+    <Property Name="DtCreate" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntEmpNum" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PTDepartment">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VcName" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PTMenu">
+    <Key>
+      <PropertyRef Name="MKBH" />
+    </Key>
+    <Property Name="MKBH" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="MKMC" Type="nvarchar" MaxLength="64" />
+    <Property Name="MKJB" Type="int" />
+    <Property Name="MKFCD" Type="nvarchar" MaxLength="255" />
+    <Property Name="MKTP" Type="nvarchar" MaxLength="128" />
+    <Property Name="MKWJM" Type="nvarchar" MaxLength="64" />
+    <Property Name="MKHSM" Type="nvarchar" MaxLength="64" />
+    <Property Name="BBH" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="CardType" Type="int" />
+    <Property Name="FastStart" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PTOperation">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" Nullable="false" />
+    <Property Name="IntMenuID" Type="int" Nullable="false" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="VcImagePath" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="PTRole">
+    <Key>
+      <PropertyRef Name="ZBH" />
+    </Key>
+    <Property Name="ZBH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ZMC" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PTzqx">
+    <Key>
+      <PropertyRef Name="ZQXBH" />
+    </Key>
+    <Property Name="ZQXBH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RYZBH" Type="int" />
+    <Property Name="MKBH" Type="nvarchar" MaxLength="255" />
+    <Property Name="IntLevel" Type="int" />
+  </EntityType>
+  <EntityType Name="T_Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PassWord" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OperRight" Type="nvarchar" MaxLength="10" />
+    <Property Name="UserChar" Type="nvarchar" MaxLength="10" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserStatus" Type="nvarchar" MaxLength="10" />
+    <Property Name="IntRoleID" Type="int" />
+    <Property Name="IntDepartmentID" Type="int" />
+  </EntityType>
+  <EntityType Name="ZdContractStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="ZdExpenseStatus">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" Nullable="false" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZdGoodsStatus">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" Nullable="false" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZdGoodsUnit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="ZdInvoiceStatus">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" Nullable="false" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZdInvoiceType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="ZdLoanStatus">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" Nullable="false" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZdPurchaseContractType">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" Nullable="false" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="ZdStockInStatus">
+    <Key>
+      <PropertyRef Name="IntID" />
+    </Key>
+    <Property Name="IntID" Type="int" Nullable="false" />
+    <Property Name="VcDesc" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__DaContrac__IntCo__3B40CD36">
+    <End Role="DaPurchaseContract" Type="Self.DaPurchaseContract" Multiplicity="1" />
+    <End Role="DaContractGoods" Type="Self.DaContractGoods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaPurchaseContract">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaContractGoods">
+        <PropertyRef Name="IntContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaContrac__IntEm__3F115E1A">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaContractGoods" Type="Self.DaContractGoods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaContractGoods">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaContrac__IntGo__3C34F16F">
+    <End Role="DaGoods" Type="Self.DaGoods" Multiplicity="1" />
+    <End Role="DaContractGoods" Type="Self.DaContractGoods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaGoods">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaContractGoods">
+        <PropertyRef Name="IntGoodsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaGoods__IntEmpN__3B75D760">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaGoods" Type="Self.DaGoods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaGoods">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaGoods__IntType__398D8EEE">
+    <End Role="DaGoodsType" Type="Self.DaGoodsType" Multiplicity="1" />
+    <End Role="DaGoods" Type="Self.DaGoods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaGoodsType">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaGoods">
+        <PropertyRef Name="IntTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaGoods__IntUnit__38996AB5">
+    <End Role="ZdGoodsUnit" Type="Self.ZdGoodsUnit" Multiplicity="1" />
+    <End Role="DaGoods" Type="Self.DaGoods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdGoodsUnit">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DaGoods">
+        <PropertyRef Name="IntUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaGoodsSu__IntGo__6EF57B66">
+    <End Role="DaGoods" Type="Self.DaGoods" Multiplicity="0..1" />
+    <End Role="DaGoodsSupplier" Type="Self.DaGoodsSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaGoods">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaGoodsSupplier">
+        <PropertyRef Name="IntGoodsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaGoodsSu__IntSu__2DB1C7EE">
+    <End Role="DaSupplier" Type="Self.DaSupplier" Multiplicity="0..1" />
+    <End Role="DaGoodsSupplier" Type="Self.DaGoodsSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaSupplier">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaGoodsSupplier">
+        <PropertyRef Name="IntSuppilerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaGoodsTy__IntEm__34C8D9D1">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaGoodsType" Type="Self.DaGoodsType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaGoodsType">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaInvoice__IntCo__46E78A0C">
+    <End Role="DaContractGoods" Type="Self.DaContractGoods" Multiplicity="1" />
+    <End Role="DaInvoice" Type="Self.DaInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaContractGoods">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaInvoice">
+        <PropertyRef Name="IntContractGoodsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaInvoice__IntEm__48CFD27E">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaInvoice" Type="Self.DaInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaInvoice">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaPurchas__IntEm__412EB0B6">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaPurchaseContract" Type="Self.DaPurchaseContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaPurchaseContract">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaStockIn__IntEm__29221CFB">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaStockIn" Type="Self.DaStockIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaStockIn">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaSupplie__IntEm__2C3393D0">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaSupplier" Type="Self.DaSupplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaSupplier">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaSupplie__IntEm__30F848ED">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaSupplierContacts" Type="Self.DaSupplierContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaSupplierContacts">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaSupplie__IntSu__44952D46">
+    <End Role="DaSupplier" Type="Self.DaSupplier" Multiplicity="1" />
+    <End Role="DaSupplierContacts" Type="Self.DaSupplierContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaSupplier">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaSupplierContacts">
+        <PropertyRef Name="IntSupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaAuditLog_DaExpense">
+    <End Role="DaExpense" Type="Self.DaExpense" Multiplicity="1" />
+    <End Role="DaExpenseAuditLog" Type="Self.DaExpenseAuditLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaExpense">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaExpenseAuditLog">
+        <PropertyRef Name="IntExpenseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaAuditLog_T_Users">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaExpenseAuditLog" Type="Self.DaExpenseAuditLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaExpenseAuditLog">
+        <PropertyRef Name="IntUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaAuditLog_ZdExpenseStatus">
+    <End Role="ZdExpenseStatus" Type="Self.ZdExpenseStatus" Multiplicity="1" />
+    <End Role="DaExpenseAuditLog" Type="Self.DaExpenseAuditLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdExpenseStatus">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaExpenseAuditLog">
+        <PropertyRef Name="IntOperationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaCompany_T_Users">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaCompany" Type="Self.DaCompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaCompany">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaExpense_DaContractGoods">
+    <End Role="DaContractGoods" Type="Self.DaContractGoods" Multiplicity="1" />
+    <End Role="DaExpense" Type="Self.DaExpense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaContractGoods">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaExpense">
+        <PropertyRef Name="IntContractGoodsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaExpense_DaGoods">
+    <End Role="DaGoods" Type="Self.DaGoods" Multiplicity="1" />
+    <End Role="DaExpense" Type="Self.DaExpense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaGoods">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaExpense">
+        <PropertyRef Name="IntGoodsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaExpense_T_Users">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaExpense" Type="Self.DaExpense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaExpense">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaExpense_ZdExpenseStatus">
+    <End Role="ZdExpenseStatus" Type="Self.ZdExpenseStatus" Multiplicity="1" />
+    <End Role="DaExpense" Type="Self.DaExpense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdExpenseStatus">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaExpense">
+        <PropertyRef Name="IntStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaGoods_ZdGoodsStatus">
+    <End Role="ZdGoodsStatus" Type="Self.ZdGoodsStatus" Multiplicity="0..1" />
+    <End Role="DaGoods" Type="Self.DaGoods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdGoodsStatus">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaGoods">
+        <PropertyRef Name="IntStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaGoodsType_DaGoodsType">
+    <End Role="DaGoodsType" Type="Self.DaGoodsType" Multiplicity="1" />
+    <End Role="DaGoodsType1" Type="Self.DaGoodsType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaGoodsType">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaGoodsType1">
+        <PropertyRef Name="IntParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaInvoice_DaGoods">
+    <End Role="DaGoods" Type="Self.DaGoods" Multiplicity="1" />
+    <End Role="DaInvoice" Type="Self.DaInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaGoods">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaInvoice">
+        <PropertyRef Name="IntGoodsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaInvoice_ZdInvoiceStatus">
+    <End Role="ZdInvoiceStatus" Type="Self.ZdInvoiceStatus" Multiplicity="1" />
+    <End Role="DaInvoice" Type="Self.DaInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdInvoiceStatus">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaInvoice">
+        <PropertyRef Name="IntStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaLoan_DaPurchaseContract">
+    <End Role="DaPurchaseContract" Type="Self.DaPurchaseContract" Multiplicity="1" />
+    <End Role="DaLoan" Type="Self.DaLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaPurchaseContract">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaLoan">
+        <PropertyRef Name="IntPurchaseContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaLoan_T_Users">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaLoan" Type="Self.DaLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaLoan">
+        <PropertyRef Name="IntEmpNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaLoan_ZdLoanStatus">
+    <End Role="ZdLoanStatus" Type="Self.ZdLoanStatus" Multiplicity="1" />
+    <End Role="DaLoan" Type="Self.DaLoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdLoanStatus">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaLoan">
+        <PropertyRef Name="IntStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaPurchaseContract_DaCompany">
+    <End Role="DaCompany" Type="Self.DaCompany" Multiplicity="1" />
+    <End Role="DaPurchaseContract" Type="Self.DaPurchaseContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaCompany">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaPurchaseContract">
+        <PropertyRef Name="IntCompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaPurchaseContract_DaSupplier">
+    <End Role="DaSupplier" Type="Self.DaSupplier" Multiplicity="1" />
+    <End Role="DaPurchaseContract" Type="Self.DaPurchaseContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaSupplier">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaPurchaseContract">
+        <PropertyRef Name="IntSupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaPurchaseContract_ZdContractStatus">
+    <End Role="ZdContractStatus" Type="Self.ZdContractStatus" Multiplicity="1" />
+    <End Role="DaPurchaseContract" Type="Self.DaPurchaseContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdContractStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DaPurchaseContract">
+        <PropertyRef Name="IntStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaPurchaseContract_ZdPurchaseContractType">
+    <End Role="ZdPurchaseContractType" Type="Self.ZdPurchaseContractType" Multiplicity="1" />
+    <End Role="DaPurchaseContract" Type="Self.DaPurchaseContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdPurchaseContractType">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaPurchaseContract">
+        <PropertyRef Name="IntType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaPurchaseContractAuditLog_DaPurchaseContract">
+    <End Role="DaPurchaseContract" Type="Self.DaPurchaseContract" Multiplicity="1" />
+    <End Role="DaPurchaseContractAuditLog" Type="Self.DaPurchaseContractAuditLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaPurchaseContract">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaPurchaseContractAuditLog">
+        <PropertyRef Name="IntPurchaseContractID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaPurchaseContractAuditLog_T_Users">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="DaPurchaseContractAuditLog" Type="Self.DaPurchaseContractAuditLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DaPurchaseContractAuditLog">
+        <PropertyRef Name="IntUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaPurchaseContractAuditLog_ZdContractStatus">
+    <End Role="ZdContractStatus" Type="Self.ZdContractStatus" Multiplicity="1" />
+    <End Role="DaPurchaseContractAuditLog" Type="Self.DaPurchaseContractAuditLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdContractStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DaPurchaseContractAuditLog">
+        <PropertyRef Name="IntOperationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaStockIn_DaGoods">
+    <End Role="DaGoods" Type="Self.DaGoods" Multiplicity="1" />
+    <End Role="DaStockIn" Type="Self.DaStockIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaGoods">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaStockIn">
+        <PropertyRef Name="IntGoodsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaStockIn_DaPurchaseContract">
+    <End Role="DaContractGoods" Type="Self.DaContractGoods" Multiplicity="1" />
+    <End Role="DaStockIn" Type="Self.DaStockIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DaContractGoods">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaStockIn">
+        <PropertyRef Name="IntContractGoodsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DaStockIn_ZdStockInStatus">
+    <End Role="ZdStockInStatus" Type="Self.ZdStockInStatus" Multiplicity="1" />
+    <End Role="DaStockIn" Type="Self.DaStockIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZdStockInStatus">
+        <PropertyRef Name="IntID" />
+      </Principal>
+      <Dependent Role="DaStockIn">
+        <PropertyRef Name="IntStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MYDBModelStoreContainer">
+    <EntitySet Name="DaCompany" EntityType="Self.DaCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaContractGoods" EntityType="Self.DaContractGoods" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaExpense" EntityType="Self.DaExpense" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaExpenseAuditLog" EntityType="Self.DaExpenseAuditLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaGoods" EntityType="Self.DaGoods" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaGoodsSupplier" EntityType="Self.DaGoodsSupplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaGoodsType" EntityType="Self.DaGoodsType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaInvoice" EntityType="Self.DaInvoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaLoan" EntityType="Self.DaLoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaPurchaseContract" EntityType="Self.DaPurchaseContract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaPurchaseContractAuditLog" EntityType="Self.DaPurchaseContractAuditLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaStockIn" EntityType="Self.DaStockIn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaSupplier" EntityType="Self.DaSupplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaSupplierContacts" EntityType="Self.DaSupplierContacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PTDepartment" EntityType="Self.PTDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PTMenu" EntityType="Self.PTMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PTOperation" EntityType="Self.PTOperation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PTRole" EntityType="Self.PTRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PTzqx" EntityType="Self.PTzqx" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Users" EntityType="Self.T_Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZdContractStatus" EntityType="Self.ZdContractStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZdExpenseStatus" EntityType="Self.ZdExpenseStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZdGoodsStatus" EntityType="Self.ZdGoodsStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZdGoodsUnit" EntityType="Self.ZdGoodsUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZdInvoiceStatus" EntityType="Self.ZdInvoiceStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZdInvoiceType" EntityType="Self.ZdInvoiceType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZdLoanStatus" EntityType="Self.ZdLoanStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZdPurchaseContractType" EntityType="Self.ZdPurchaseContractType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZdStockInStatus" EntityType="Self.ZdStockInStatus" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__DaContrac__IntCo__3B40CD36" Association="Self.FK__DaContrac__IntCo__3B40CD36">
+      <End Role="DaPurchaseContract" EntitySet="DaPurchaseContract" />
+      <End Role="DaContractGoods" EntitySet="DaContractGoods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaContrac__IntEm__3F115E1A" Association="Self.FK__DaContrac__IntEm__3F115E1A">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaContractGoods" EntitySet="DaContractGoods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaContrac__IntGo__3C34F16F" Association="Self.FK__DaContrac__IntGo__3C34F16F">
+      <End Role="DaGoods" EntitySet="DaGoods" />
+      <End Role="DaContractGoods" EntitySet="DaContractGoods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaGoods__IntEmpN__3B75D760" Association="Self.FK__DaGoods__IntEmpN__3B75D760">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaGoods" EntitySet="DaGoods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaGoods__IntType__398D8EEE" Association="Self.FK__DaGoods__IntType__398D8EEE">
+      <End Role="DaGoodsType" EntitySet="DaGoodsType" />
+      <End Role="DaGoods" EntitySet="DaGoods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaGoods__IntUnit__38996AB5" Association="Self.FK__DaGoods__IntUnit__38996AB5">
+      <End Role="ZdGoodsUnit" EntitySet="ZdGoodsUnit" />
+      <End Role="DaGoods" EntitySet="DaGoods" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaGoodsSu__IntGo__6EF57B66" Association="Self.FK__DaGoodsSu__IntGo__6EF57B66">
+      <End Role="DaGoods" EntitySet="DaGoods" />
+      <End Role="DaGoodsSupplier" EntitySet="DaGoodsSupplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaGoodsSu__IntSu__2DB1C7EE" Association="Self.FK__DaGoodsSu__IntSu__2DB1C7EE">
+      <End Role="DaSupplier" EntitySet="DaSupplier" />
+      <End Role="DaGoodsSupplier" EntitySet="DaGoodsSupplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaGoodsTy__IntEm__34C8D9D1" Association="Self.FK__DaGoodsTy__IntEm__34C8D9D1">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaGoodsType" EntitySet="DaGoodsType" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaInvoice__IntCo__46E78A0C" Association="Self.FK__DaInvoice__IntCo__46E78A0C">
+      <End Role="DaContractGoods" EntitySet="DaContractGoods" />
+      <End Role="DaInvoice" EntitySet="DaInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaInvoice__IntEm__48CFD27E" Association="Self.FK__DaInvoice__IntEm__48CFD27E">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaInvoice" EntitySet="DaInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaPurchas__IntEm__412EB0B6" Association="Self.FK__DaPurchas__IntEm__412EB0B6">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaPurchaseContract" EntitySet="DaPurchaseContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaStockIn__IntEm__29221CFB" Association="Self.FK__DaStockIn__IntEm__29221CFB">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaStockIn" EntitySet="DaStockIn" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaSupplie__IntEm__2C3393D0" Association="Self.FK__DaSupplie__IntEm__2C3393D0">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaSupplier" EntitySet="DaSupplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaSupplie__IntEm__30F848ED" Association="Self.FK__DaSupplie__IntEm__30F848ED">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaSupplierContacts" EntitySet="DaSupplierContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaSupplie__IntSu__44952D46" Association="Self.FK__DaSupplie__IntSu__44952D46">
+      <End Role="DaSupplier" EntitySet="DaSupplier" />
+      <End Role="DaSupplierContacts" EntitySet="DaSupplierContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaAuditLog_DaExpense" Association="Self.FK_DaAuditLog_DaExpense">
+      <End Role="DaExpense" EntitySet="DaExpense" />
+      <End Role="DaExpenseAuditLog" EntitySet="DaExpenseAuditLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaAuditLog_T_Users" Association="Self.FK_DaAuditLog_T_Users">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaExpenseAuditLog" EntitySet="DaExpenseAuditLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaAuditLog_ZdExpenseStatus" Association="Self.FK_DaAuditLog_ZdExpenseStatus">
+      <End Role="ZdExpenseStatus" EntitySet="ZdExpenseStatus" />
+      <End Role="DaExpenseAuditLog" EntitySet="DaExpenseAuditLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaCompany_T_Users" Association="Self.FK_DaCompany_T_Users">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaCompany" EntitySet="DaCompany" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaExpense_DaContractGoods" Association="Self.FK_DaExpense_DaContractGoods">
+      <End Role="DaContractGoods" EntitySet="DaContractGoods" />
+      <End Role="DaExpense" EntitySet="DaExpense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaExpense_DaGoods" Association="Self.FK_DaExpense_DaGoods">
+      <End Role="DaGoods" EntitySet="DaGoods" />
+      <End Role="DaExpense" EntitySet="DaExpense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaExpense_T_Users" Association="Self.FK_DaExpense_T_Users">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaExpense" EntitySet="DaExpense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaExpense_ZdExpenseStatus" Association="Self.FK_DaExpense_ZdExpenseStatus">
+      <End Role="ZdExpenseStatus" EntitySet="ZdExpenseStatus" />
+      <End Role="DaExpense" EntitySet="DaExpense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaGoods_ZdGoodsStatus" Association="Self.FK_DaGoods_ZdGoodsStatus">
+      <End Role="ZdGoodsStatus" EntitySet="ZdGoodsStatus" />
+      <End Role="DaGoods" EntitySet="DaGoods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaGoodsType_DaGoodsType" Association="Self.FK_DaGoodsType_DaGoodsType">
+      <End Role="DaGoodsType" EntitySet="DaGoodsType" />
+      <End Role="DaGoodsType1" EntitySet="DaGoodsType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaInvoice_DaGoods" Association="Self.FK_DaInvoice_DaGoods">
+      <End Role="DaGoods" EntitySet="DaGoods" />
+      <End Role="DaInvoice" EntitySet="DaInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaInvoice_ZdInvoiceStatus" Association="Self.FK_DaInvoice_ZdInvoiceStatus">
+      <End Role="ZdInvoiceStatus" EntitySet="ZdInvoiceStatus" />
+      <End Role="DaInvoice" EntitySet="DaInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaLoan_DaPurchaseContract" Association="Self.FK_DaLoan_DaPurchaseContract">
+      <End Role="DaPurchaseContract" EntitySet="DaPurchaseContract" />
+      <End Role="DaLoan" EntitySet="DaLoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaLoan_T_Users" Association="Self.FK_DaLoan_T_Users">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaLoan" EntitySet="DaLoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaLoan_ZdLoanStatus" Association="Self.FK_DaLoan_ZdLoanStatus">
+      <End Role="ZdLoanStatus" EntitySet="ZdLoanStatus" />
+      <End Role="DaLoan" EntitySet="DaLoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaPurchaseContract_DaCompany" Association="Self.FK_DaPurchaseContract_DaCompany">
+      <End Role="DaCompany" EntitySet="DaCompany" />
+      <End Role="DaPurchaseContract" EntitySet="DaPurchaseContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaPurchaseContract_DaSupplier" Association="Self.FK_DaPurchaseContract_DaSupplier">
+      <End Role="DaSupplier" EntitySet="DaSupplier" />
+      <End Role="DaPurchaseContract" EntitySet="DaPurchaseContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaPurchaseContract_ZdContractStatus" Association="Self.FK_DaPurchaseContract_ZdContractStatus">
+      <End Role="ZdContractStatus" EntitySet="ZdContractStatus" />
+      <End Role="DaPurchaseContract" EntitySet="DaPurchaseContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaPurchaseContract_ZdPurchaseContractType" Association="Self.FK_DaPurchaseContract_ZdPurchaseContractType">
+      <End Role="ZdPurchaseContractType" EntitySet="ZdPurchaseContractType" />
+      <End Role="DaPurchaseContract" EntitySet="DaPurchaseContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaPurchaseContractAuditLog_DaPurchaseContract" Association="Self.FK_DaPurchaseContractAuditLog_DaPurchaseContract">
+      <End Role="DaPurchaseContract" EntitySet="DaPurchaseContract" />
+      <End Role="DaPurchaseContractAuditLog" EntitySet="DaPurchaseContractAuditLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaPurchaseContractAuditLog_T_Users" Association="Self.FK_DaPurchaseContractAuditLog_T_Users">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="DaPurchaseContractAuditLog" EntitySet="DaPurchaseContractAuditLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaPurchaseContractAuditLog_ZdContractStatus" Association="Self.FK_DaPurchaseContractAuditLog_ZdContractStatus">
+      <End Role="ZdContractStatus" EntitySet="ZdContractStatus" />
+      <End Role="DaPurchaseContractAuditLog" EntitySet="DaPurchaseContractAuditLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaStockIn_DaGoods" Association="Self.FK_DaStockIn_DaGoods">
+      <End Role="DaGoods" EntitySet="DaGoods" />
+      <End Role="DaStockIn" EntitySet="DaStockIn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaStockIn_DaPurchaseContract" Association="Self.FK_DaStockIn_DaPurchaseContract">
+      <End Role="DaContractGoods" EntitySet="DaContractGoods" />
+      <End Role="DaStockIn" EntitySet="DaStockIn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DaStockIn_ZdStockInStatus" Association="Self.FK_DaStockIn_ZdStockInStatus">
+      <End Role="ZdStockInStatus" EntitySet="ZdStockInStatus" />
+      <End Role="DaStockIn" EntitySet="DaStockIn" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,172 @@
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\bin\Debug\升级.exe.config
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\bin\Debug\升级.exe
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\bin\Debug\升级.pdb
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\obj\x86\Debug\升级.exe
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\obj\x86\Debug\升级.pdb
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\升级\obj\x86\Debug\升级.升级.resources
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\销售管理\bin\Debug\升级.exe.config
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\销售管理\bin\Debug\升级.exe
+C:\Documents and Settings\hexiang\桌面\公司软件\销售管理\销售管理\bin\Debug\升级.pdb
+Z:\现在\公司软件\销售管理\销售管理\bin\Debug\升级.exe.config
+Z:\现在\公司软件\销售管理\销售管理\bin\Debug\升级.exe
+Z:\现在\公司软件\销售管理\销售管理\bin\Debug\升级.pdb
+Z:\现在\公司软件\销售管理\升级\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\现在\公司软件\销售管理\升级\obj\x86\Debug\升级.升级.resources
+Z:\现在\公司软件\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+Z:\现在\公司软件\销售管理\升级\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\现在\公司软件\销售管理\升级\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\现在\公司软件\销售管理\升级\obj\x86\Debug\升级.exe
+Z:\现在\公司软件\销售管理\升级\obj\x86\Debug\升级.pdb
+C:\Documents and Settings\weixin\桌面\销售管理\销售管理\bin\Debug\升级.exe.config
+C:\Documents and Settings\weixin\桌面\销售管理\升级\obj\x86\Debug\升级.exe
+C:\Documents and Settings\weixin\桌面\销售管理\升级\obj\x86\Debug\升级.pdb
+C:\Documents and Settings\weixin\桌面\销售管理\销售管理\bin\Debug\升级.exe
+C:\Documents and Settings\weixin\桌面\销售管理\销售管理\bin\Debug\升级.pdb
+C:\Documents and Settings\weixin\桌面\销售管理\升级\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\weixin\桌面\销售管理\升级\obj\x86\Debug\升级.升级.resources
+C:\Documents and Settings\weixin\桌面\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+C:\Documents and Settings\weixin\桌面\销售管理\升级\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\weixin\桌面\销售管理\升级\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\销售管理\bin\Debug\升级.exe.config
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\销售管理\bin\Debug\升级.exe
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\销售管理\bin\Debug\升级.pdb
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\升级.升级.resources
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\升级.exe
+Z:\现在\公司软件\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\升级.pdb
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\销售管理\bin\Debug\升级.exe.config
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\销售管理\bin\Debug\升级.exe
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\销售管理\bin\Debug\升级.pdb
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\升级.升级.resources
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\升级.exe
+C:\Documents and Settings\weixin\桌面\销售管理1.0.0.8\销售管理\升级\obj\x86\Debug\升级.pdb
+Z:\现在\公司软件\销售管理\销售管理\销售管理\bin\Debug\升级.exe.config
+Z:\现在\公司软件\销售管理\销售管理\销售管理\bin\Debug\升级.exe
+Z:\现在\公司软件\销售管理\销售管理\销售管理\bin\Debug\升级.pdb
+Z:\现在\公司软件\销售管理\销售管理\升级\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\现在\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.升级.resources
+Z:\现在\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+Z:\现在\公司软件\销售管理\销售管理\升级\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\现在\公司软件\销售管理\销售管理\升级\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\现在\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.exe
+Z:\现在\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.pdb
+E:\贺翔程序\公司软件\销售管理\销售管理\销售管理\bin\Debug\升级.exe.config
+E:\贺翔程序\公司软件\销售管理\销售管理\销售管理\bin\Debug\升级.exe
+E:\贺翔程序\公司软件\销售管理\销售管理\销售管理\bin\Debug\升级.pdb
+E:\贺翔程序\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+E:\贺翔程序\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.升级.resources
+E:\贺翔程序\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+E:\贺翔程序\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+E:\贺翔程序\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.exe
+E:\贺翔程序\公司软件\销售管理\销售管理\升级\obj\x86\Debug\升级.pdb
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\销售管理\bin\Debug\升级.exe.config
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\销售管理\bin\Debug\升级.exe
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\销售管理\bin\Debug\升级.pdb
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.升级.resources
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.exe
+Z:\现在\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.pdb
+X:\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+X:\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.升级.resources
+X:\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+X:\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+X:\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.exe
+X:\公司软件-供应商管理\销售管理\销售管理\销售管理\bin\Debug\升级.exe.config
+X:\公司软件-供应商管理\销售管理\销售管理\销售管理\bin\Debug\升级.exe
+X:\公司软件-供应商管理\销售管理\销售管理\销售管理\bin\Debug\升级.pdb
+X:\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.pdb
+E:\工作\公司软件-供应商管理\销售管理\销售管理\销售管理\bin\Debug\升级.exe.config
+E:\工作\公司软件-供应商管理\销售管理\销售管理\销售管理\bin\Debug\升级.exe
+E:\工作\公司软件-供应商管理\销售管理\销售管理\销售管理\bin\Debug\升级.pdb
+E:\工作\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+E:\工作\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.升级.resources
+E:\工作\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+E:\工作\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+E:\工作\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.exe
+E:\工作\公司软件-供应商管理\销售管理\销售管理\升级\obj\x86\Debug\升级.pdb
+C:\Users\欣\Desktop\销售管理\销售管理\销售管理\bin\Debug\升级.exe.config
+C:\Users\欣\Desktop\销售管理\销售管理\销售管理\bin\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理\销售管理\销售管理\bin\Debug\升级.pdb
+C:\Users\欣\Desktop\销售管理\销售管理\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+C:\Users\欣\Desktop\销售管理\销售管理\升级\obj\x86\Debug\升级.升级.resources
+C:\Users\欣\Desktop\销售管理\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+C:\Users\欣\Desktop\销售管理\销售管理\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+C:\Users\欣\Desktop\销售管理\销售管理\升级\obj\x86\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理\销售管理\升级\obj\x86\Debug\升级.pdb
+C:\Users\欣\Desktop\销售管理2.0.0.117\销售管理\销售管理\bin\Debug\升级.exe.config
+C:\Users\欣\Desktop\销售管理2.0.0.117\销售管理\销售管理\bin\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理2.0.0.117\销售管理\销售管理\bin\Debug\升级.pdb
+C:\Users\欣\Desktop\销售管理2.0.0.117\销售管理\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+C:\Users\欣\Desktop\销售管理2.0.0.117\销售管理\升级\obj\x86\Debug\升级.升级.resources
+C:\Users\欣\Desktop\销售管理2.0.0.117\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+C:\Users\欣\Desktop\销售管理2.0.0.117\销售管理\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+C:\Users\欣\Desktop\销售管理2.0.0.117\销售管理\升级\obj\x86\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理2.0.0.117\销售管理\升级\obj\x86\Debug\升级.pdb
+C:\Users\欣\Desktop\销售管理2.0.0.118\销售管理\销售管理\bin\Debug\升级.exe.config
+C:\Users\欣\Desktop\销售管理2.0.0.118\销售管理\销售管理\bin\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理2.0.0.118\销售管理\销售管理\bin\Debug\升级.pdb
+C:\Users\欣\Desktop\销售管理2.0.0.118\销售管理\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+C:\Users\欣\Desktop\销售管理2.0.0.118\销售管理\升级\obj\x86\Debug\升级.升级.resources
+C:\Users\欣\Desktop\销售管理2.0.0.118\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+C:\Users\欣\Desktop\销售管理2.0.0.118\销售管理\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+C:\Users\欣\Desktop\销售管理2.0.0.118\销售管理\升级\obj\x86\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理2.0.0.118\销售管理\升级\obj\x86\Debug\升级.pdb
+C:\Users\欣\Desktop\销售管理2.0.0.119\销售管理\销售管理\bin\Debug\升级.exe.config
+C:\Users\欣\Desktop\销售管理2.0.0.119\销售管理\销售管理\bin\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理2.0.0.119\销售管理\销售管理\bin\Debug\升级.pdb
+C:\Users\欣\Desktop\销售管理2.0.0.119\销售管理\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+C:\Users\欣\Desktop\销售管理2.0.0.119\销售管理\升级\obj\x86\Debug\升级.升级.resources
+C:\Users\欣\Desktop\销售管理2.0.0.119\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+C:\Users\欣\Desktop\销售管理2.0.0.119\销售管理\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+C:\Users\欣\Desktop\销售管理2.0.0.119\销售管理\升级\obj\x86\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理2.0.0.119\销售管理\升级\obj\x86\Debug\升级.pdb
+G:\work\销售管理\销售管理\bin\Debug\升级.exe.config
+G:\work\销售管理\销售管理\bin\Debug\升级.exe
+G:\work\销售管理\销售管理\bin\Debug\升级.pdb
+G:\work\销售管理\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+G:\work\销售管理\升级\obj\x86\Debug\升级.升级.resources
+G:\work\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+G:\work\销售管理\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+G:\work\销售管理\升级\obj\x86\Debug\升级.exe
+G:\work\销售管理\升级\obj\x86\Debug\升级.pdb
+D:\HiTech\魏欣\销售管理\销售管理\bin\Debug\升级.exe.config
+D:\HiTech\魏欣\销售管理\销售管理\bin\Debug\升级.exe
+D:\HiTech\魏欣\销售管理\销售管理\bin\Debug\升级.pdb
+D:\HiTech\魏欣\销售管理\升级\obj\x86\Debug\升级.升级.resources
+D:\HiTech\魏欣\销售管理\升级\obj\x86\Debug\升级.Properties.Resources.resources
+D:\HiTech\魏欣\销售管理\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+D:\HiTech\魏欣\销售管理\升级\obj\x86\Debug\升级.exe
+D:\HiTech\魏欣\销售管理\升级\obj\x86\Debug\升级.pdb
+D:\HiTech\魏欣\销售管理\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+C:\Users\欣\Desktop\销售管理系统\销售管理\bin\Debug\升级.exe.config
+C:\Users\欣\Desktop\销售管理系统\销售管理\bin\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理系统\销售管理\bin\Debug\升级.pdb
+C:\Users\欣\Desktop\销售管理系统\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+C:\Users\欣\Desktop\销售管理系统\升级\obj\x86\Debug\升级.升级.resources
+C:\Users\欣\Desktop\销售管理系统\升级\obj\x86\Debug\升级.Properties.Resources.resources
+C:\Users\欣\Desktop\销售管理系统\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+C:\Users\欣\Desktop\销售管理系统\升级\obj\x86\Debug\升级.exe
+C:\Users\欣\Desktop\销售管理系统\升级\obj\x86\Debug\升级.pdb
+C:\Users\rthitech\Desktop\销售管理系统\销售管理\bin\Debug\升级.exe.config
+C:\Users\rthitech\Desktop\销售管理系统\销售管理\bin\Debug\升级.exe
+C:\Users\rthitech\Desktop\销售管理系统\销售管理\bin\Debug\升级.pdb
+C:\Users\rthitech\Desktop\销售管理系统\升级\obj\x86\Debug\升级.csprojResolveAssemblyReference.cache
+C:\Users\rthitech\Desktop\销售管理系统\升级\obj\x86\Debug\升级.升级.resources
+C:\Users\rthitech\Desktop\销售管理系统\升级\obj\x86\Debug\升级.Properties.Resources.resources
+C:\Users\rthitech\Desktop\销售管理系统\升级\obj\x86\Debug\升级.csproj.GenerateResource.Cache
+C:\Users\rthitech\Desktop\销售管理系统\升级\obj\x86\Debug\升级.exe
+C:\Users\rthitech\Desktop\销售管理系统\升级\obj\x86\Debug\升级.pdb
