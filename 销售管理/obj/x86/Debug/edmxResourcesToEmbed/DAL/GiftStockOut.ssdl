@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MYDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MYDBModelStoreContainer">
+    <EntitySet Name="T_Customers" EntityType="MYDBModel.Store.T_Customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_Gifts" EntityType="MYDBModel.Store.T_Gifts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_GiftStockOut" EntityType="MYDBModel.Store.T_GiftStockOut" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_Users" EntityType="MYDBModel.Store.T_Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_T_GiftStockOut_T_Customers" Association="MYDBModel.Store.FK_T_GiftStockOut_T_Customers">
+      <End Role="T_Customers" EntitySet="T_Customers" />
+      <End Role="T_GiftStockOut" EntitySet="T_GiftStockOut" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_GiftStockOut_T_Gifts" Association="MYDBModel.Store.FK_T_GiftStockOut_T_Gifts">
+      <End Role="T_Gifts" EntitySet="T_Gifts" />
+      <End Role="T_GiftStockOut" EntitySet="T_GiftStockOut" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_GiftStockOut_T_Users" Association="MYDBModel.Store.FK_T_GiftStockOut_T_Users">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_GiftStockOut" EntitySet="T_GiftStockOut" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_GiftStockOut_T_Users1" Association="MYDBModel.Store.FK_T_GiftStockOut_T_Users1">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_GiftStockOut" EntitySet="T_GiftStockOut" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_GiftStockOut_T_Users2" Association="MYDBModel.Store.FK_T_GiftStockOut_T_Users2">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_GiftStockOut" EntitySet="T_GiftStockOut" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="T_Customers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CompanyAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="BusinessContactName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BusinessContactTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="BusinessContactPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="BusinessContactEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="TechContactName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TechContactTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="TechContactPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="TechContactEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="OperName" Type="bigint" />
+    <Property Name="DeliverName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeliverAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="DeliverPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="CityID" Type="bigint" />
+    <Property Name="Status" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="T_Gifts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GiftName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Price" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="StockNum" Type="numeric" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_GiftStockOut">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DataDate" Type="date" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="CustomerId" Type="bigint" />
+    <Property Name="GiftId" Type="bigint" Nullable="false" />
+    <Property Name="GiftName" Type="nvarchar" MaxLength="50" />
+    <Property Name="GiftNum" Type="numeric" Nullable="false" />
+    <Property Name="GiftPrice" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="GiftSum" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="AuditId" Type="bigint" />
+    <Property Name="AuditDate" Type="datetime" />
+    <Property Name="OperId" Type="bigint" Nullable="false" />
+    <Property Name="RecDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LoginName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PassWord" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OperRight" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="UserChar" Type="nvarchar" MaxLength="10" />
+    <Property Name="DepartmentName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserStatus" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_T_GiftStockOut_T_Customers">
+    <End Role="T_Customers" Type="MYDBModel.Store.T_Customers" Multiplicity="0..1" />
+    <End Role="T_GiftStockOut" Type="MYDBModel.Store.T_GiftStockOut" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Customers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="T_GiftStockOut">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_GiftStockOut_T_Gifts">
+    <End Role="T_Gifts" Type="MYDBModel.Store.T_Gifts" Multiplicity="1" />
+    <End Role="T_GiftStockOut" Type="MYDBModel.Store.T_GiftStockOut" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Gifts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="T_GiftStockOut">
+        <PropertyRef Name="GiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_GiftStockOut_T_Users">
+    <End Role="T_Users" Type="MYDBModel.Store.T_Users" Multiplicity="0..1" />
+    <End Role="T_GiftStockOut" Type="MYDBModel.Store.T_GiftStockOut" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="T_GiftStockOut">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_GiftStockOut_T_Users1">
+    <End Role="T_Users" Type="MYDBModel.Store.T_Users" Multiplicity="0..1" />
+    <End Role="T_GiftStockOut" Type="MYDBModel.Store.T_GiftStockOut" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="T_GiftStockOut">
+        <PropertyRef Name="AuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_GiftStockOut_T_Users2">
+    <End Role="T_Users" Type="MYDBModel.Store.T_Users" Multiplicity="1" />
+    <End Role="T_GiftStockOut" Type="MYDBModel.Store.T_GiftStockOut" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="T_GiftStockOut">
+        <PropertyRef Name="OperId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

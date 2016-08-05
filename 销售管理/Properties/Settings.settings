@@ -1,0 +1,37 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="销售管理.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DBMeterConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\DBMeter.mdb;Persist Security Info=True;Jet OLEDB:Database Password=meiyoumima2011&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\DBMeter.mdb;Persist Security Info=True;Jet OLEDB:Database Password=meiyoumima2011</Value>
+    </Setting>
+    <Setting Name="DBMeterConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\bin\Debug\DBMeter.mdb;Persist Security Info=True;Jet OLEDB:Database Password=meiyoumima2011&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\bin\Debug\DBMeter.mdb;Persist Security Info=True;Jet OLEDB:Database Password=meiyoumima2011</Value>
+    </Setting>
+    <Setting Name="MYDBEntities2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;metadata=res://*/DAL.ModelDa.csdl|res://*/DAL.ModelDa.ssdl|res://*/DAL.ModelDa.msl;provider=System.Data.SqlClient;provider connection string="data source=192.168.1.126;initial catalog=MYDB;user id=sa;password=sasa;MultipleActiveResultSets=True;App=EntityFramework";  providerName="System.Data.EntityClient"&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">metadata=res://*/DAL.ModelDa.csdl|res://*/DAL.ModelDa.ssdl|res://*/DAL.ModelDa.msl;provider=System.Data.SqlClient;provider connection string="data source=192.168.1.126;initial catalog=MYDB;user id=sa;password=sasa;MultipleActiveResultSets=True;App=EntityFramework";  providerName="System.Data.EntityClient"</Value>
+    </Setting>
+    <Setting Name="mydbConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.10.126;Initial Catalog=MYDB;Persist Security Info=True;User ID=sa;Password=Server2012&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.10.126;Initial Catalog=MYDB;Persist Security Info=True;User ID=sa;Password=Server2012</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

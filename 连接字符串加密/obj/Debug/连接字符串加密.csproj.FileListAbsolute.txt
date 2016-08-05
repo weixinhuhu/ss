@@ -1,0 +1,12 @@
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\bin\Debug\连接字符串加密.exe
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\bin\Debug\连接字符串加密.pdb
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\bin\Debug\SoftCommon.dll
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\bin\Debug\NPOI.dll
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\bin\Debug\EPPlus.dll
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\bin\Debug\SoftCommon.pdb
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\obj\Debug\连接字符串加密.csprojResolveAssemblyReference.cache
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\obj\Debug\连接字符串加密.Form1.resources
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\obj\Debug\连接字符串加密.Properties.Resources.resources
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\obj\Debug\连接字符串加密.csproj.GenerateResource.Cache
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\obj\Debug\连接字符串加密.exe
+X:\公司软件-供应商管理\销售管理\销售管理\连接字符串加密\obj\Debug\连接字符串加密.pdb

@@ -1,0 +1,8 @@
+C:\Users\欣\Desktop\销售管理系统\Common\bin\x86\Release\Common.dll
+C:\Users\欣\Desktop\销售管理系统\Common\bin\x86\Release\SoftCommon.dll
+C:\Users\欣\Desktop\销售管理系统\Common\bin\x86\Release\NPOI.dll
+C:\Users\欣\Desktop\销售管理系统\Common\bin\x86\Release\EPPlus.dll
+C:\Users\欣\Desktop\销售管理系统\Common\obj\x86\Release\Common.csprojResolveAssemblyReference.cache
+C:\Users\欣\Desktop\销售管理系统\Common\obj\x86\Release\Common.UserControlBase.resources
+C:\Users\欣\Desktop\销售管理系统\Common\obj\x86\Release\Common.csproj.GenerateResource.Cache
+C:\Users\欣\Desktop\销售管理系统\Common\obj\x86\Release\Common.dll
