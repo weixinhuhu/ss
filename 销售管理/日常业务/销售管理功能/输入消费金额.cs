@@ -40,6 +40,11 @@ namespace 销售管理.日常业务
             }
         }
 
+        private void 输入消费金额_Load(object sender, EventArgs e)
+        {
+
+        }
+
  
     }
 }

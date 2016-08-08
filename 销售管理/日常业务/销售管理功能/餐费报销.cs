@@ -342,6 +342,7 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5} {6}";
                 
             }
 
+            //还卡金额录入
             if (e.ColumnIndex == dgvGiftStockOut.Columns["ColBackCard"].Index)
             {
                 //还卡
@@ -360,6 +361,34 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5} {6}";
                     {
                         mMoney = mForm.mMoney;
                         mBackDate = mForm.mBackTime;
+
+                        //修改日期：2016/8/8 修改内容：添加超额提示 
+                        #region
+                        String username;//销售姓名
+                        String userid; //销售编号
+                        String maxMoney;  //销售剩余额度
+                        username = dgvGiftStockOut.Rows[e.RowIndex].Cells["IntUsedID"].Value.ToString();
+                        if (username == String.Empty)
+                        {
+                            MessageBox.Show("获取‘使用人’失败！");
+                            return;
+                        }
+                        String sql = string.Format(@"SELECT id FROM dbo.T_Users WHERE UserName='{0}'", username);
+                        userid = SqlHelper.ExecuteScalar(sql).ToString();
+                        string mSql = string.Format(@"select ss.salesum - gs.GiftSum-ms.mealsum from (select isnull(sum(summoney)/200,0) salesum from T_Saledetails where saledate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and username={0}) ss,(select isnull(sum(GiftSum),0) giftsum from t_GiftStockOut where userid={0} and datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','审核未通过')) gs,(select isnull(sum(mealmoney),0) mealsum from t_meals where userid={0} and datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status <>'已删除') ms", userid);
+                        maxMoney = SqlHelper.ExecuteScalar(mSql).ToString();
+                        if ((Convert.ToDecimal(maxMoney) - Convert.ToDecimal(mMoney)) <= -5000)
+                        {
+                            DialogResult dr;
+                            dr = MessageBox.Show("剩余额度已超5000元，是否继续报销", "超额提醒", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                            if (dr == DialogResult.No)
+                            {
+                                return;
+                            }
+                        }
+
+                        #endregion
+
                         using (SqlConnection mConn = new SqlConnection(Common.CommonClass.SqlConnStr))
                         {
                             mConn.Open();

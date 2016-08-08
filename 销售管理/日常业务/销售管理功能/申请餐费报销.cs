@@ -218,6 +218,7 @@ namespace 销售管理.日常业务
                 //    }
                 //}
 
+   
                 long userid = Convert.ToInt64(cmbUsers.SelectedValue);
                 string userRight = "";
                 var mUserTable = new T_UsersTableAdapter().GetDataById(userid);
@@ -242,7 +243,20 @@ namespace 销售管理.日常业务
                     }
                 }
 
+                //修改日期2016/8/8   添加超额提醒
+                if ((maxMoney - mealMoney) < -5000)
+                {
+                    DialogResult dr;
+                    dr = MessageBox.Show("剩余额度已超5000元，是否继续报销", "超额提醒", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                    if (dr == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
 
+
+                //数据库操作
+                #region
                 using (SqlConnection mConn = new SqlConnection(Common.CommonClass.SqlConnStr))
                 {
                     mConn.Open();
@@ -263,6 +277,7 @@ namespace 销售管理.日常业务
                                     status = "已提交等待领导审核";
                                 }
                                 //添加餐费报销记录
+
                                 ret = adapter.Insert(dtpDataDate.Value.Date, Convert.ToInt64(cmbUsers.SelectedValue), Convert.ToInt64(cmbCustomers.SelectedValue), Convert.ToInt64(cmbCard.SelectedValue), mealMoney, Classes.PubClass.UserId, status, Convert.ToInt64(CBoxUsed.SelectedValue));
                                 if (ret > 0)
                                 {
@@ -367,9 +382,7 @@ namespace 销售管理.日常业务
                                     MessageBox.Show("修改失败:1");
                                     return;
                                 }
-
                             }
-
                         }
                         catch (Exception ex)
                         {
@@ -379,8 +392,11 @@ namespace 销售管理.日常业务
                         }
                     }
                 }
-            }
 
+                #endregion 
+           
+            }
+         
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);

@@ -175,6 +175,16 @@ namespace 销售管理.日常业务
             //    return;
             //}
 
+            //修改时间：2016/8/8 修改内容：添加销售角色剩余额度判断
+            #region
+            if (operRight == "销售" && Convert.ToDecimal(txtMaxSum.Text) - Convert.ToDecimal(txtSum.Text) < -5000)
+            {
+                MessageBox.Show("剩余额度已超5000元,礼品出库申请提交失败！", "超额提醒");
+                return;
+            }
+            #endregion
+
+
             try
             {
                 decimal mCurrentNum = Convert.ToDecimal(txtCurrentNum.Text);
