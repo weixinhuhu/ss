@@ -218,7 +218,7 @@ namespace 销售管理.日常业务
                 //    }
                 //}
 
-   
+
                 long userid = Convert.ToInt64(cmbUsers.SelectedValue);
                 string userRight = "";
                 var mUserTable = new T_UsersTableAdapter().GetDataById(userid);
@@ -243,6 +243,7 @@ namespace 销售管理.日常业务
                     }
                 }
 
+
                 //修改日期2016/8/8   添加超额提醒
                 if ((maxMoney - mealMoney) < -5000)
                 {
@@ -257,6 +258,7 @@ namespace 销售管理.日常业务
 
                 //数据库操作
                 #region
+
                 using (SqlConnection mConn = new SqlConnection(Common.CommonClass.SqlConnStr))
                 {
                     mConn.Open();
@@ -382,8 +384,13 @@ namespace 销售管理.日常业务
                                     MessageBox.Show("修改失败:1");
                                     return;
                                 }
+
                             }
-                        }
+
+
+                            }
+
+                   
                         catch (Exception ex)
                         {
                             mTrans.Rollback();
@@ -393,10 +400,15 @@ namespace 销售管理.日常业务
                     }
                 }
 
+
                 #endregion 
            
             }
          
+
+            
+
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);

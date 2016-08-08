@@ -175,6 +175,7 @@ namespace 销售管理.日常业务
             //    return;
             //}
 
+
             //修改时间：2016/8/8 修改内容：添加销售角色剩余额度判断
             #region
             if (operRight == "销售" && Convert.ToDecimal(txtMaxSum.Text) - Convert.ToDecimal(txtSum.Text) < -5000)
@@ -183,6 +184,8 @@ namespace 销售管理.日常业务
                 return;
             }
             #endregion
+
+
 
 
             try

@@ -342,6 +342,7 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5} {6}";
                 
             }
 
+
             //还卡金额录入
             if (e.ColumnIndex == dgvGiftStockOut.Columns["ColBackCard"].Index)
             {
@@ -361,6 +362,7 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5} {6}";
                     {
                         mMoney = mForm.mMoney;
                         mBackDate = mForm.mBackTime;
+
 
                         //修改日期：2016/8/8 修改内容：添加超额提示 
                         #region
@@ -388,6 +390,7 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5} {6}";
                         }
 
                         #endregion
+
 
                         using (SqlConnection mConn = new SqlConnection(Common.CommonClass.SqlConnStr))
                         {
