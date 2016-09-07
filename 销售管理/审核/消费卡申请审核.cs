@@ -38,10 +38,10 @@ left join (select isnull(ss.salesum,0) - isnull(gs.GiftSum,0)-isnull(ms.mealsum,
 left join
 (select sum(summoney)/200 salesum ,username from T_Saledetails where saledate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') group by username) ss on a.id = ss.username
 left join
-(select sum(GiftSum) giftsum,userid from t_GiftStockOut where datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','审核未通过','已提交等待领导审核') group by userid) gs on a.id = gs.userid
+(select sum(GiftSum) giftsum,IntUsedID from t_GiftStockOut where datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','审核未通过','已提交等待领导审核') group by IntUsedID) gs on a.id = gs.IntUsedID
 left join 
-(select sum(mealmoney) mealsum,userid from t_meals where  datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','已提交等待领导审核') group by userid) ms on a.id = ms.userid
-) edu on ms.userid = edu.id
+(select sum(mealmoney) mealsum,IntUsedID from t_meals where  datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','已提交等待领导审核') group by IntUsedID) ms on a.id = ms.IntUsedID
+) edu on ms.IntUsedID = edu.id
 where ms.status <> '已删除' {0} {1} {2} {3} {4} {5}";//
             string mC1 = "", mC2 = "", mC3 = "", mC4 = "", sDept = "", sUsedEmp = "";
 

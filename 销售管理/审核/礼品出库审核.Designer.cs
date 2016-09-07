@@ -30,6 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvExAllocation = new System.Windows.Forms.DataGridView();
+            this.ColumnChecked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IntUsedID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartmentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giftIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giftNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giftNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giftPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giftSumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col当前额度 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auditDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tGiftStockOutBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetGiftStockOut = new 销售管理.DAL.DataSetGiftStockOut();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -49,22 +65,6 @@
             this.cmbUserName = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.t_GiftStockOutTableAdapter = new 销售管理.DAL.DataSetGiftStockOutTableAdapters.T_GiftStockOutTableAdapter();
-            this.ColumnChecked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IntUsedID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartmentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giftIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giftNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giftNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giftPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giftSumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col当前额度 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.auditDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExAllocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tGiftStockOutBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetGiftStockOut)).BeginInit();
@@ -112,6 +112,136 @@
             this.dgvExAllocation.ShowEditingIcon = false;
             this.dgvExAllocation.Size = new System.Drawing.Size(1880, 1080);
             this.dgvExAllocation.TabIndex = 8;
+            // 
+            // ColumnChecked
+            // 
+            this.ColumnChecked.Frozen = true;
+            this.ColumnChecked.HeaderText = "选择";
+            this.ColumnChecked.Name = "ColumnChecked";
+            this.ColumnChecked.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnChecked.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumnChecked.Width = 97;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn.Width = 79;
+            // 
+            // dataDateDataGridViewTextBoxColumn
+            // 
+            this.dataDateDataGridViewTextBoxColumn.DataPropertyName = "DataDate";
+            this.dataDateDataGridViewTextBoxColumn.HeaderText = "日期";
+            this.dataDateDataGridViewTextBoxColumn.Name = "dataDateDataGridViewTextBoxColumn";
+            this.dataDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataDateDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "领用人";
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userIdDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // IntUsedID
+            // 
+            this.IntUsedID.DataPropertyName = "IntUsedID";
+            this.IntUsedID.HeaderText = "使用人";
+            this.IntUsedID.Name = "IntUsedID";
+            this.IntUsedID.ReadOnly = true;
+            this.IntUsedID.Width = 118;
+            // 
+            // DepartmentName
+            // 
+            this.DepartmentName.DataPropertyName = "DepartmentName";
+            this.DepartmentName.HeaderText = "所属部门";
+            this.DepartmentName.Name = "DepartmentName";
+            this.DepartmentName.Width = 118;
+            // 
+            // customerIdDataGridViewTextBoxColumn
+            // 
+            this.customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
+            this.customerIdDataGridViewTextBoxColumn.HeaderText = "客户名称";
+            this.customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
+            this.customerIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.customerIdDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // giftIdDataGridViewTextBoxColumn
+            // 
+            this.giftIdDataGridViewTextBoxColumn.DataPropertyName = "GiftId";
+            this.giftIdDataGridViewTextBoxColumn.HeaderText = "GiftId";
+            this.giftIdDataGridViewTextBoxColumn.Name = "giftIdDataGridViewTextBoxColumn";
+            this.giftIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.giftIdDataGridViewTextBoxColumn.Visible = false;
+            this.giftIdDataGridViewTextBoxColumn.Width = 127;
+            // 
+            // giftNameDataGridViewTextBoxColumn
+            // 
+            this.giftNameDataGridViewTextBoxColumn.DataPropertyName = "GiftName";
+            this.giftNameDataGridViewTextBoxColumn.HeaderText = "礼品名称";
+            this.giftNameDataGridViewTextBoxColumn.Name = "giftNameDataGridViewTextBoxColumn";
+            this.giftNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.giftNameDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // giftNumDataGridViewTextBoxColumn
+            // 
+            this.giftNumDataGridViewTextBoxColumn.DataPropertyName = "GiftNum";
+            this.giftNumDataGridViewTextBoxColumn.HeaderText = "领用数量";
+            this.giftNumDataGridViewTextBoxColumn.Name = "giftNumDataGridViewTextBoxColumn";
+            this.giftNumDataGridViewTextBoxColumn.ReadOnly = true;
+            this.giftNumDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // giftPriceDataGridViewTextBoxColumn
+            // 
+            this.giftPriceDataGridViewTextBoxColumn.DataPropertyName = "GiftPrice";
+            this.giftPriceDataGridViewTextBoxColumn.HeaderText = "礼品单价";
+            this.giftPriceDataGridViewTextBoxColumn.Name = "giftPriceDataGridViewTextBoxColumn";
+            this.giftPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.giftPriceDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // giftSumDataGridViewTextBoxColumn
+            // 
+            this.giftSumDataGridViewTextBoxColumn.DataPropertyName = "GiftSum";
+            this.giftSumDataGridViewTextBoxColumn.HeaderText = "礼品金额";
+            this.giftSumDataGridViewTextBoxColumn.Name = "giftSumDataGridViewTextBoxColumn";
+            this.giftSumDataGridViewTextBoxColumn.ReadOnly = true;
+            this.giftSumDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // Col当前额度
+            // 
+            this.Col当前额度.DataPropertyName = "ed";
+            this.Col当前额度.HeaderText = "本年剩余额度";
+            this.Col当前额度.Name = "Col当前额度";
+            this.Col当前额度.Width = 140;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "状态";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // auditDateDataGridViewTextBoxColumn
+            // 
+            this.auditDateDataGridViewTextBoxColumn.DataPropertyName = "AuditDate";
+            this.auditDateDataGridViewTextBoxColumn.HeaderText = "审核时间";
+            this.auditDateDataGridViewTextBoxColumn.Name = "auditDateDataGridViewTextBoxColumn";
+            this.auditDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.auditDateDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // recDateDataGridViewTextBoxColumn
+            // 
+            this.recDateDataGridViewTextBoxColumn.DataPropertyName = "RecDate";
+            this.recDateDataGridViewTextBoxColumn.HeaderText = "RecDate";
+            this.recDateDataGridViewTextBoxColumn.Name = "recDateDataGridViewTextBoxColumn";
+            this.recDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.recDateDataGridViewTextBoxColumn.Visible = false;
+            this.recDateDataGridViewTextBoxColumn.Width = 139;
             // 
             // tGiftStockOutBindingSource
             // 
@@ -333,136 +463,6 @@
             // t_GiftStockOutTableAdapter
             // 
             this.t_GiftStockOutTableAdapter.ClearBeforeFill = true;
-            // 
-            // ColumnChecked
-            // 
-            this.ColumnChecked.Frozen = true;
-            this.ColumnChecked.HeaderText = "选择";
-            this.ColumnChecked.Name = "ColumnChecked";
-            this.ColumnChecked.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnChecked.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumnChecked.Width = 103;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            this.idDataGridViewTextBoxColumn.Width = 79;
-            // 
-            // dataDateDataGridViewTextBoxColumn
-            // 
-            this.dataDateDataGridViewTextBoxColumn.DataPropertyName = "DataDate";
-            this.dataDateDataGridViewTextBoxColumn.HeaderText = "日期";
-            this.dataDateDataGridViewTextBoxColumn.Name = "dataDateDataGridViewTextBoxColumn";
-            this.dataDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataDateDataGridViewTextBoxColumn.Width = 103;
-            // 
-            // userIdDataGridViewTextBoxColumn
-            // 
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "领用人";
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userIdDataGridViewTextBoxColumn.Width = 127;
-            // 
-            // IntUsedID
-            // 
-            this.IntUsedID.DataPropertyName = "IntUsedID";
-            this.IntUsedID.HeaderText = "使用人";
-            this.IntUsedID.Name = "IntUsedID";
-            this.IntUsedID.ReadOnly = true;
-            this.IntUsedID.Width = 127;
-            // 
-            // DepartmentName
-            // 
-            this.DepartmentName.DataPropertyName = "DepartmentName";
-            this.DepartmentName.HeaderText = "所属部门";
-            this.DepartmentName.Name = "DepartmentName";
-            this.DepartmentName.Width = 151;
-            // 
-            // customerIdDataGridViewTextBoxColumn
-            // 
-            this.customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
-            this.customerIdDataGridViewTextBoxColumn.HeaderText = "客户名称";
-            this.customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
-            this.customerIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerIdDataGridViewTextBoxColumn.Width = 151;
-            // 
-            // giftIdDataGridViewTextBoxColumn
-            // 
-            this.giftIdDataGridViewTextBoxColumn.DataPropertyName = "GiftId";
-            this.giftIdDataGridViewTextBoxColumn.HeaderText = "GiftId";
-            this.giftIdDataGridViewTextBoxColumn.Name = "giftIdDataGridViewTextBoxColumn";
-            this.giftIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.giftIdDataGridViewTextBoxColumn.Visible = false;
-            this.giftIdDataGridViewTextBoxColumn.Width = 127;
-            // 
-            // giftNameDataGridViewTextBoxColumn
-            // 
-            this.giftNameDataGridViewTextBoxColumn.DataPropertyName = "GiftName";
-            this.giftNameDataGridViewTextBoxColumn.HeaderText = "礼品名称";
-            this.giftNameDataGridViewTextBoxColumn.Name = "giftNameDataGridViewTextBoxColumn";
-            this.giftNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.giftNameDataGridViewTextBoxColumn.Width = 151;
-            // 
-            // giftNumDataGridViewTextBoxColumn
-            // 
-            this.giftNumDataGridViewTextBoxColumn.DataPropertyName = "GiftNum";
-            this.giftNumDataGridViewTextBoxColumn.HeaderText = "领用数量";
-            this.giftNumDataGridViewTextBoxColumn.Name = "giftNumDataGridViewTextBoxColumn";
-            this.giftNumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.giftNumDataGridViewTextBoxColumn.Width = 151;
-            // 
-            // giftPriceDataGridViewTextBoxColumn
-            // 
-            this.giftPriceDataGridViewTextBoxColumn.DataPropertyName = "GiftPrice";
-            this.giftPriceDataGridViewTextBoxColumn.HeaderText = "礼品单价";
-            this.giftPriceDataGridViewTextBoxColumn.Name = "giftPriceDataGridViewTextBoxColumn";
-            this.giftPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.giftPriceDataGridViewTextBoxColumn.Width = 151;
-            // 
-            // giftSumDataGridViewTextBoxColumn
-            // 
-            this.giftSumDataGridViewTextBoxColumn.DataPropertyName = "GiftSum";
-            this.giftSumDataGridViewTextBoxColumn.HeaderText = "礼品金额";
-            this.giftSumDataGridViewTextBoxColumn.Name = "giftSumDataGridViewTextBoxColumn";
-            this.giftSumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.giftSumDataGridViewTextBoxColumn.Width = 151;
-            // 
-            // Col当前额度
-            // 
-            this.Col当前额度.DataPropertyName = "ed";
-            this.Col当前额度.HeaderText = "本年剩余额度";
-            this.Col当前额度.Name = "Col当前额度";
-            this.Col当前额度.Width = 140;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "状态";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn.Width = 97;
-            // 
-            // auditDateDataGridViewTextBoxColumn
-            // 
-            this.auditDateDataGridViewTextBoxColumn.DataPropertyName = "AuditDate";
-            this.auditDateDataGridViewTextBoxColumn.HeaderText = "审核时间";
-            this.auditDateDataGridViewTextBoxColumn.Name = "auditDateDataGridViewTextBoxColumn";
-            this.auditDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.auditDateDataGridViewTextBoxColumn.Width = 118;
-            // 
-            // recDateDataGridViewTextBoxColumn
-            // 
-            this.recDateDataGridViewTextBoxColumn.DataPropertyName = "RecDate";
-            this.recDateDataGridViewTextBoxColumn.HeaderText = "RecDate";
-            this.recDateDataGridViewTextBoxColumn.Name = "recDateDataGridViewTextBoxColumn";
-            this.recDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.recDateDataGridViewTextBoxColumn.Visible = false;
-            this.recDateDataGridViewTextBoxColumn.Width = 139;
             // 
             // 礼品出库审核
             // 

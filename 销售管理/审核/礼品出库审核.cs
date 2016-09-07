@@ -21,8 +21,7 @@ namespace 销售管理.审核
         }
 
         private void btnSerch_Click(object sender, EventArgs e)
-        {
-          
+        {       
             refresh();
         }
 
@@ -39,11 +38,11 @@ select isnull(ss.salesum,0) - isnull(gs.GiftSum,0)-isnull(ms.mealsum,0) ed,a.id 
 left join
 (select sum(summoney)/200 salesum ,username from T_Saledetails where saledate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') group by username) ss on a.id = ss.username
 left join
-(select sum(GiftSum) giftsum,userid from t_GiftStockOut where datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','审核未通过','已提交等待领导审核') group by userid) gs on a.id = gs.userid
+(select sum(GiftSum) giftsum,IntUsedID from t_GiftStockOut where datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','审核未通过','已提交等待领导审核') group by IntUsedID) gs on a.id = gs.IntUsedID
 left join 
-(select sum(mealmoney) mealsum,userid from t_meals where  datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','已提交等待领导审核') group by userid) ms on a.id = ms.userid
+(select sum(mealmoney) mealsum,IntUsedID from t_meals where  datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','已提交等待领导审核') group by IntUsedID) ms on a.id = ms.IntUsedID
 
-) aa on gso.userid = aa.id 
+) aa on gso.IntUsedID = aa.id 
 where gso.status <> '已删除' {0} {1} {2} {3} {4} {5}";
             string mC1 = "", mC2 = "", mC3 = "", mC4 = "", sDept = "", sUsedEmp = "";
 
