@@ -90,3 +90,4 @@ C:\Users\rthitech\Desktop\销售管理系统\Common\obj\x86\Debug\Common.UserCon
 C:\Users\rthitech\Desktop\销售管理系统\Common\obj\x86\Debug\Common.csproj.GenerateResource.Cache
 C:\Users\rthitech\Desktop\销售管理系统\Common\obj\x86\Debug\Common.dll
 C:\Users\rthitech\Desktop\销售管理系统\Common\obj\x86\Debug\Common.pdb
+C:\Users\rthitech\Desktop\销售管理系统\Client\bin\Debug\Common.dll.config

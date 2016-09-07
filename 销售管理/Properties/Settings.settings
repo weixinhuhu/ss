@@ -28,10 +28,10 @@
     <Setting Name="mydbConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=192.168.10.126;Initial Catalog=MYDB;Persist Security Info=True;User ID=sa;Password=Server2012&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.10.126;Initial Catalog=MYDB;Persist Security Info=True;User ID=sa;Password=sasa&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=192.168.10.126;Initial Catalog=MYDB;Persist Security Info=True;User ID=sa;Password=Server2012</Value>
+      <Value Profile="(Default)">Data Source=192.168.10.126;Initial Catalog=MYDB;Persist Security Info=True;User ID=sa;Password=sasa</Value>
     </Setting>
   </Settings>
 </SettingsFile>
