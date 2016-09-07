@@ -59,7 +59,7 @@ namespace 销售管理.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.10.126;Initial Catalog=MYDB;Persist Security Info=True;User I" +
-            "D=sa;Password=Server2012")]
+            "D=sa;Password=sasa")]
         public string mydbConnectionString {
             get {
                 return ((string)(this["mydbConnectionString"]));

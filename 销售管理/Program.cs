@@ -48,18 +48,18 @@ namespace 销售管理
                 return;
             }
             
-            //检查是否有更新
-            //Version sVer = new Version(Convert.ToString(new T_UpdateTableAdapter().GetMaxVer()));
-            //Version mVer = Assembly.GetExecutingAssembly().GetName().Version;
-            //if (sVer > mVer)
-            //{
-            //    //MessageBox.Show("开始升级");
-            //    System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory + "升级.exe");
-            //    //MessageBox.Show("升级完成");
-            //    //Application.Exit();
-            //    //System.Environment.Exit(0);
-            //    return;
-            //}
+           // 检查是否有更新
+            Version sVer = new Version(Convert.ToString(new T_UpdateTableAdapter().GetMaxVer()));
+            Version mVer = Assembly.GetExecutingAssembly().GetName().Version;
+            if (sVer > mVer)
+            {
+                //MessageBox.Show("开始升级");
+                System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory + "升级.exe");
+                //MessageBox.Show("升级完成");
+                //Application.Exit();
+                //System.Environment.Exit(0);
+                return;
+            }
 
             //更新本程序以外的其它文件
             //var mFilesTable = new T_UpdateTableAdapter().GetOtherProgramMaxVer();

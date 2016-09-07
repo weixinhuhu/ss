@@ -22,6 +22,17 @@ namespace 销售管理.审核
 
         private void btnSerch_Click(object sender, EventArgs e)
         {
+          
+            refresh();
+        }
+
+       
+       /// <summary>admin   1
+       /// 
+       /// 刷新页面
+       /// </summary>
+       private void refresh()
+        {
             string mSql = @"select gso.Id,gso.datadate,un.username userid,un.DepartmentName,cn.companyname customerid,gso.giftid,gso.giftname,gso.giftnum,gso.giftprice,gso.giftsum,gso.status,an.username auditName,gso.auditdate,aa.ed,P.username IntUsedID from t_giftstockout gso left join t_users un on gso.userid = un.id left join t_customers cn on gso.customerid = cn.id left join t_users an on gso.auditid = an.id left join t_users P on gso.IntUsedID = P.id left join 
         (
 select isnull(ss.salesum,0) - isnull(gs.GiftSum,0)-isnull(ms.mealsum,0) ed,a.id from t_users a
@@ -79,74 +90,6 @@ where gso.status <> '已删除' {0} {1} {2} {3} {4} {5}";
                 MessageBox.Show("没有记录");
                 return;
             }
-
-           // refresh();
-        }
-
-       
-       /// <summary>
-       /// 刷新页面
-       /// </summary>
-       private void refresh()
-        {
-            string mSql = @"select gso.Id,gso.datadate,un.username userid,cn.companyname customerid,gso.giftid,gso.giftname,gso.giftnum,gso.giftprice,gso.giftsum,gso.status,an.username auditName,gso.auditdate,aa.ed,P.username IntUsedID from t_giftstockout gso left join t_users un on gso.userid = un.id left join t_customers cn on gso.customerid = cn.id left join t_users an on gso.auditid = an.id left join t_users P on gso.IntUsedID = P.id left join 
-        (
-select isnull(ss.salesum,0) - isnull(gs.GiftSum,0)-isnull(ms.mealsum,0) ed,a.id from t_users a
-left join
-(select sum(summoney)/200 salesum ,username from T_Saledetails where saledate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') group by username) ss on a.id = ss.username
-left join
-(select sum(GiftSum) giftsum,userid from t_GiftStockOut where datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','审核未通过','已提交等待领导审核') group by userid) gs on a.id = gs.userid
-left join 
-(select sum(mealmoney) mealsum,userid from t_meals where  datadate between (convert(varchar(4),getdate(),120) + '-01-01') and (convert(varchar(4),getdate(),120) + '-12-31') and status not in('已删除','已提交等待领导审核') group by userid) ms on a.id = ms.userid
-
-) aa on gso.userid = aa.id 
-where gso.status <> '已删除' {0} {1} {2} {3} {4} {5}";
-            string mC1 = "", mC2 = "", mC3 = "", mC4 = "", sDept = "", sUsedEmp = "";
-
-            if (cmbUserName.Text != string.Empty)
-            {
-                mC1 = "and un.username like '%" + cmbUserName.Text + "%'";
-            }
-            if (CBoxUsed.Text != string.Empty)
-            {
-                sUsedEmp = "and P.username like '%" + CBoxUsed.Text + "%'";
-            }
-            if (cmbCustomers.Text != string.Empty)
-            {
-                mC2 = "and cn.companyname like '%" + cmbCustomers.Text + "%'";
-            }
-            if (cmbGifts.Text != string.Empty)
-            {
-                mC3 = "and gso.giftname like '%" + cmbGifts.Text + "%'";
-            }
-            if (cmbHasAudit.Text != string.Empty)
-            {
-                if (cmbHasAudit.Text == "未审核")
-                {
-                    mC4 = "and gso.status='已提交等待领导审核'";
-                }
-                else if (cmbHasAudit.Text == "审核未通过")
-                {
-                    mC4 = "and gso.status='" + cmbHasAudit.Text + "'";
-                }
-                else //已通过
-                {
-                    mC4 = "and gso.status not in('审核未通过','已提交等待领导审核')";
-                }
-            }
-            if (CBoxDept.Text != string.Empty)
-            {
-                sDept = "and un.DepartmentName like '%" + CBoxDept.Text + "%'";
-            }
-            mSql = string.Format(mSql, mC1, mC2, mC3, mC4, sDept, sUsedEmp);
-
-            dgvExAllocation.DataSource = SqlHelper.GetData(mSql);
-            if ((dgvExAllocation.DataSource as DataTable).Rows.Count < 1)
-            {
-                return;
-            }
-
-
         } 
 
 
