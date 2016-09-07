@@ -108,9 +108,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(56, 44);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(1888, 200);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -125,7 +125,7 @@
             this.CBoxUsed.FormattingEnabled = true;
             this.CBoxUsed.IntegralHeight = false;
             this.CBoxUsed.Location = new System.Drawing.Point(144, 120);
-            this.CBoxUsed.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.CBoxUsed.Margin = new System.Windows.Forms.Padding(6);
             this.CBoxUsed.Name = "CBoxUsed";
             this.CBoxUsed.Size = new System.Drawing.Size(268, 32);
             this.CBoxUsed.TabIndex = 9;
@@ -148,17 +148,8 @@
             this.CmbDepartmentName.DropDownWidth = 200;
             this.CmbDepartmentName.FormattingEnabled = true;
             this.CmbDepartmentName.IntegralHeight = false;
-            this.CmbDepartmentName.Items.AddRange(new object[] {
-            "销售",
-            "领导",
-            "财务",
-            "融通创投",
-            "RTM",
-            "商务经理",
-            "商务助理",
-            "生产与质量"});
             this.CmbDepartmentName.Location = new System.Drawing.Point(546, 120);
-            this.CmbDepartmentName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.CmbDepartmentName.Margin = new System.Windows.Forms.Padding(6);
             this.CmbDepartmentName.Name = "CmbDepartmentName";
             this.CmbDepartmentName.Size = new System.Drawing.Size(346, 32);
             this.CmbDepartmentName.TabIndex = 7;
@@ -178,7 +169,7 @@
             // 
             this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcel.Location = new System.Drawing.Point(1694, 98);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(6);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(150, 46);
             this.btnExcel.TabIndex = 5;
@@ -203,7 +194,7 @@
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Location = new System.Drawing.Point(1694, 40);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(6);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(150, 46);
             this.btnSearch.TabIndex = 3;
@@ -214,7 +205,7 @@
             // dtpEnd
             // 
             this.dtpEnd.Location = new System.Drawing.Point(1416, 120);
-            this.dtpEnd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtpEnd.Margin = new System.Windows.Forms.Padding(6);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(250, 35);
             this.dtpEnd.TabIndex = 2;
@@ -223,7 +214,7 @@
             // 
             this.dtpStart.Checked = false;
             this.dtpStart.Location = new System.Drawing.Point(1416, 54);
-            this.dtpStart.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtpStart.Margin = new System.Windows.Forms.Padding(6);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.ShowCheckBox = true;
             this.dtpStart.Size = new System.Drawing.Size(250, 35);
@@ -238,7 +229,7 @@
             this.cmbCards.FormattingEnabled = true;
             this.cmbCards.IntegralHeight = false;
             this.cmbCards.Location = new System.Drawing.Point(1032, 54);
-            this.cmbCards.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmbCards.Margin = new System.Windows.Forms.Padding(6);
             this.cmbCards.Name = "cmbCards";
             this.cmbCards.Size = new System.Drawing.Size(296, 32);
             this.cmbCards.TabIndex = 1;
@@ -252,7 +243,7 @@
             this.cmbCustomers.FormattingEnabled = true;
             this.cmbCustomers.IntegralHeight = false;
             this.cmbCustomers.Location = new System.Drawing.Point(546, 54);
-            this.cmbCustomers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmbCustomers.Margin = new System.Windows.Forms.Padding(6);
             this.cmbCustomers.Name = "cmbCustomers";
             this.cmbCustomers.Size = new System.Drawing.Size(346, 32);
             this.cmbCustomers.TabIndex = 1;
@@ -274,7 +265,7 @@
             "审核未通过",
             "现金"});
             this.cmbStatus.Location = new System.Drawing.Point(1032, 120);
-            this.cmbStatus.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(6);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(296, 32);
             this.cmbStatus.TabIndex = 1;
@@ -288,7 +279,7 @@
             this.cmbUsers.FormattingEnabled = true;
             this.cmbUsers.IntegralHeight = false;
             this.cmbUsers.Location = new System.Drawing.Point(144, 54);
-            this.cmbUsers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmbUsers.Margin = new System.Windows.Forms.Padding(6);
             this.cmbUsers.Name = "cmbUsers";
             this.cmbUsers.Size = new System.Drawing.Size(268, 32);
             this.cmbUsers.TabIndex = 1;
@@ -386,7 +377,7 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgvGiftStockOut.DataSource = this.tMealsBindingSource;
             this.dgvGiftStockOut.Location = new System.Drawing.Point(56, 252);
-            this.dgvGiftStockOut.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvGiftStockOut.Margin = new System.Windows.Forms.Padding(6);
             this.dgvGiftStockOut.Name = "dgvGiftStockOut";
             this.dgvGiftStockOut.ReadOnly = true;
             this.dgvGiftStockOut.RowTemplate.Height = 23;
@@ -561,7 +552,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvGiftStockOut);
-            this.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.Margin = new System.Windows.Forms.Padding(12);
             this.Name = "餐费报销";
             this.Load += new System.EventHandler(this.餐费报销_Load);
             this.Controls.SetChildIndex(this.btnClose, 0);

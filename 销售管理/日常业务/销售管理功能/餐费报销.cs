@@ -40,7 +40,7 @@ namespace 销售管理.日常业务
 
 
                 //添加部门字段  2015.5.11 wx
-                string mSql = @"select ms.Id,ms.datadate,ms.backdate,un.username userid,un.DepartmentName DepartmentName,cn.companyname customerid,ms.cardid,ca.cardname cardname,ms.mealmoney,ms.recdate,ms.status,op.username operid,P.username IntUsedID from t_meals ms
+                string mSql = @"select ms.Id,ms.datadate,ms.backdate,un.username userid,P.DepartmentName DepartmentName,cn.companyname customerid,ms.cardid,ca.cardname cardname,ms.mealmoney,ms.recdate,ms.status,op.username operid,P.username IntUsedID from t_meals ms
 left join t_users un on ms.userid = un.id
 left join t_customers cn on ms.customerid = cn.id
 left join t_cards ca on ms.cardid = ca.id
@@ -82,7 +82,7 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5} {6}";
 
                 if (CmbDepartmentName.Text != string.Empty)
                 {
-                    mDepartmentName = "and un.DepartmentName ='" + CmbDepartmentName.Text + "'";
+                    mDepartmentName = "and P.DepartmentName ='" + CmbDepartmentName.Text + "'";
                 }
 
                 mSql = string.Format(mSql, mCUser, mCCustomer, mCCard, mCDate, mStatus, mDepartmentName, sUsedEmp);
@@ -160,7 +160,10 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5} {6}";
                 ColBackCard.Visible = false;
             }
 
-            
+            CmbDepartmentName.DisplayMember = "VcName";
+            CmbDepartmentName.DataSource = SqlHelper.GetData(" SELECT VcName FROM [dbo].[PTDepartment]"); ;
+            CmbDepartmentName.SelectedIndex = -1;
+
             var mTable = new T_CardsTableAdapter().GetData();
             var mRow = mTable.NewRow();
             mRow["cardname"] = "";

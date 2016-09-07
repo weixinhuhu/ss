@@ -28,7 +28,7 @@ namespace 销售管理.审核
         /// 刷新查询数据
         /// </summary>
         private void refresh() {
-            string mSql = @"select ms.Id,ms.datadate,un.username userid,cn.companyname customerid,ms.cardid,ca.cardname cardname,ca.cardbalance,edu.ed,ms.mealmoney,ms.recdate,ms.status,an.username auditid,ms.auditdate,un.DepartmentName,P.username IntUsedID from t_meals ms
+            string mSql = @"select ms.Id,ms.datadate,un.username userid,cn.companyname customerid,ms.cardid,ca.cardname cardname,ca.cardbalance,edu.ed,ms.mealmoney,ms.recdate,ms.status,an.username auditid,ms.auditdate,p.DepartmentName,P.username IntUsedID from t_meals ms
 left join t_users un on ms.userid = un.id
 left join t_customers cn on ms.customerid = cn.id
 left join t_cards ca on ms.cardid = ca.id
@@ -80,7 +80,7 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5}";//
             }
             if (CBoxDept.Text != string.Empty)
             {
-                sDept = "and un.DepartmentName like '%" + CBoxDept.Text + "%'";
+                sDept = "and P.DepartmentName like '%" + CBoxDept.Text + "%'";
             }
             mSql = string.Format(mSql, mC1, mC2, mC3, mC4, sDept, sUsedEmp);
 

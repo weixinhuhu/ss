@@ -60,6 +60,10 @@ namespace 销售管理.日常业务
             }
 
 
+            CmbDepartmentName.DisplayMember = "VcName";
+            CmbDepartmentName.DataSource = SqlHelper.GetData(" SELECT VcName FROM [dbo].[PTDepartment]"); ;
+            CmbDepartmentName.SelectedIndex = -1;
+
             cmbGifts.DisplayMember = "GiftName";
             cmbGifts.ValueMember = "Id";
             cmbGifts.DataSource = new T_GiftsTableAdapter().GetData();
@@ -69,7 +73,7 @@ namespace 销售管理.日常业务
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string mSql = "select gso.id, gso.datadate datadate,un.username userid,un.departmentname departmentname,cn.companyname customerid,gso.giftid,gso.giftname giftname,gso.giftnum,gso.giftprice,gso.giftsum,gso.status,an.username auditid,gso.auditdate,gso.recdate,gso.hasstockout,P.username IntUsedID from t_giftstockout gso left join t_users un on gso.userid = un.id left join t_users an on gso.auditid = an.id LEFT JOIN T_Users P ON gso.IntUsedID=P.id left join t_customers cn on cn.id = customerid where gso.status <>'已删除' {0} {1} {2} {3} {4} {5} {6}";
+            string mSql = "select gso.id, gso.datadate datadate,un.username userid,P.departmentname departmentname,cn.companyname customerid,gso.giftid,gso.giftname giftname,gso.giftnum,gso.giftprice,gso.giftsum,gso.status,an.username auditid,gso.auditdate,gso.recdate,gso.hasstockout,P.username IntUsedID from t_giftstockout gso left join t_users un on gso.userid = un.id left join t_users an on gso.auditid = an.id LEFT JOIN T_Users P ON gso.IntUsedID=P.id left join t_customers cn on cn.id = customerid where gso.status <>'已删除' {0} {1} {2} {3} {4} {5} {6}";
             string mCUser = "", sUesd = "", mCCustomer = "", mCGift = "", mCDate = "", mCStockOut = "", mDepartmentName = "";//mCRight=""
             if (cmbUsers.Text != string.Empty)
             {
@@ -97,7 +101,7 @@ namespace 销售管理.日常业务
             }
             if (CmbDepartmentName.Text != string.Empty)
             {
-                mDepartmentName = "and un.DepartmentName ='" + CmbDepartmentName.Text + "'";
+                mDepartmentName = "and P.DepartmentName ='" + CmbDepartmentName.Text + "'";
             }
 
 

@@ -83,3 +83,4 @@ C:\Users\rthitech\Desktop\销售管理系统\SoftCommon\bin\x86\Debug\EPPlus.dll
 C:\Users\rthitech\Desktop\销售管理系统\SoftCommon\bin\x86\Debug\NPOI.dll
 C:\Users\rthitech\Desktop\销售管理系统\SoftCommon\obj\x86\Debug\SoftCommon.dll
 C:\Users\rthitech\Desktop\销售管理系统\SoftCommon\obj\x86\Debug\SoftCommon.pdb
+C:\Users\rthitech\Desktop\销售管理系统\SoftCommon\obj\x86\Debug\SoftCommon.csprojResolveAssemblyReference.cache

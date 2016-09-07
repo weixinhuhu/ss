@@ -20,13 +20,8 @@ namespace 销售管理.审核
             InitializeComponent();
         }
 
-        private void btnSerch_Click(object sender, EventArgs e)
-<<<<<<< HEAD
-        {       
-=======
-        {
-          
->>>>>>> e23093715c470c40d54e303c9e5ad3a726f5681b
+        private void btnSerch_Click(object sender, EventArgs e){
+
             refresh();
         }
 
@@ -37,7 +32,7 @@ namespace 销售管理.审核
        /// </summary>
        private void refresh()
         {
-            string mSql = @"select gso.Id,gso.datadate,un.username userid,un.DepartmentName,cn.companyname customerid,gso.giftid,gso.giftname,gso.giftnum,gso.giftprice,gso.giftsum,gso.status,an.username auditName,gso.auditdate,aa.ed,P.username IntUsedID from t_giftstockout gso left join t_users un on gso.userid = un.id left join t_customers cn on gso.customerid = cn.id left join t_users an on gso.auditid = an.id left join t_users P on gso.IntUsedID = P.id left join 
+            string mSql = @"select gso.Id,gso.datadate,un.username userid,p.DepartmentName,cn.companyname customerid,gso.giftid,gso.giftname,gso.giftnum,gso.giftprice,gso.giftsum,gso.status,an.username auditName,gso.auditdate,aa.ed,P.username IntUsedID from t_giftstockout gso left join t_users un on gso.userid = un.id left join t_customers cn on gso.customerid = cn.id left join t_users an on gso.auditid = an.id left join t_users P on gso.IntUsedID = P.id left join 
         (
 select isnull(ss.salesum,0) - isnull(gs.GiftSum,0)-isnull(ms.mealsum,0) ed,a.id from t_users a
 left join
@@ -84,7 +79,7 @@ where gso.status <> '已删除' {0} {1} {2} {3} {4} {5}";
             }
             if (CBoxDept.Text != string.Empty)
             {
-                sDept = "and un.DepartmentName like '%" + CBoxDept.Text + "%'";
+                sDept = "and P.DepartmentName like '%" + CBoxDept.Text + "%'";
             }
             mSql = string.Format(mSql, mC1, mC2, mC3, mC4, sDept, sUsedEmp);
 
