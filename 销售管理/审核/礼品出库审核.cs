@@ -21,7 +21,12 @@ namespace 销售管理.审核
         }
 
         private void btnSerch_Click(object sender, EventArgs e)
+<<<<<<< HEAD
         {       
+=======
+        {
+          
+>>>>>>> e23093715c470c40d54e303c9e5ad3a726f5681b
             refresh();
         }
 
