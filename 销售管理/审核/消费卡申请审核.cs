@@ -22,6 +22,12 @@ namespace 销售管理.审核
 
         private void btnSerch_Click(object sender, EventArgs e)
         {
+            refresh(); 
+        }
+        /// <summary>
+        /// 刷新查询数据
+        /// </summary>
+        private void refresh() {
             string mSql = @"select ms.Id,ms.datadate,un.username userid,cn.companyname customerid,ms.cardid,ca.cardname cardname,ca.cardbalance,edu.ed,ms.mealmoney,ms.recdate,ms.status,an.username auditid,ms.auditdate,un.DepartmentName,P.username IntUsedID from t_meals ms
 left join t_users un on ms.userid = un.id
 left join t_customers cn on ms.customerid = cn.id
@@ -53,7 +59,7 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5}";//
             }
             if (cmbCards.Text != string.Empty)
             {
-                mC3 = "and ca.cardname like '%"+ cmbCards.Text +"%'";
+                mC3 = "and ca.cardname like '%" + cmbCards.Text + "%'";
             }
             if (cmbHasAudit.Text != string.Empty)
             {
@@ -155,13 +161,15 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5}";//
                 if (ret > 0)
                 {
                     Dlg.ShowOKInfo("保存成功");
-                    foreach (DataGridViewRow mRow in dgvExAllocation.Rows)
-                    {
-                        if (Convert.ToBoolean(mRow.Cells["ColumnChecked"].Value) == true)
-                        {
-                            dgvExAllocation.Rows.Remove(mRow);
-                        }
-                    }
+                    //修改页面显示2016.9.6
+                    refresh();
+                    //foreach (DataGridViewRow mRow in dgvExAllocation.Rows)
+                    //{
+                    //    if (Convert.ToBoolean(mRow.Cells["ColumnChecked"].Value) == true)
+                    //    {
+                    //        dgvExAllocation.Rows.Remove(mRow);
+                    //    }
+                    //}
                 }
                 else
                 {
@@ -197,13 +205,17 @@ where ms.status <> '已删除' {0} {1} {2} {3} {4} {5}";//
                 if (ret > 0)
                 {
                     Dlg.ShowOKInfo("保存成功!");
-                    foreach (DataGridViewRow mRow in dgvExAllocation.Rows)
-                    {
-                        if (Convert.ToBoolean(mRow.Cells["ColumnChecked"].Value) == true)
-                        {
-                            dgvExAllocation.Rows.Remove(mRow);
-                        }
-                    }
+
+                    //修改页面显示2016.9.6
+                    refresh();
+
+                    //foreach (DataGridViewRow mRow in dgvExAllocation.Rows)
+                    //{
+                    //    if (Convert.ToBoolean(mRow.Cells["ColumnChecked"].Value) == true)
+                    //    {
+                    //        dgvExAllocation.Rows.Remove(mRow);
+                    //    }
+                    //}
                 }
                 else
                 {
