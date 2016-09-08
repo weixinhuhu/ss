@@ -485,7 +485,10 @@ namespace 销售管理.Main
             ry.AreaCode = txtAreaCode.Text.Trim();
             ry.IntDepartmentID = Convert.ToInt32(cmbDepart.SelectedValue);
             ry.IntRoleID = Convert.ToInt32(cmbRole.SelectedValue);
-            
+
+            ry.DepartmentName = cmbDepart.Text.Trim(); //部门名称
+            ry.OperRight = cmbRole.Text.Trim();//权限名称
+
             int ret = Convert.ToInt32(SqlHelper.ExecuteScalar(string.Format("select count(1) from t_users where loginName='{0}'", ry.LoginName)));
             if (ret > 0)
             {
@@ -494,7 +497,13 @@ namespace 销售管理.Main
                 return;
             }
 
-            string mSql = string.Format("insert into t_users(loginname,UserName,userChar,IntDepartmentID,IntRoleID,userstatus,PassWord) values ('{0}','{1}','{2}',{3},{4},'正常','{5}')", ry.LoginName, ry.UserName, ry.AreaCode, ry.IntDepartmentID, ry.IntRoleID, MD5.Md5Encrypt("1"));
+           // string mSql = string.Format("insert into t_users(loginname,UserName,userChar,IntDepartmentID,IntRoleID,userstatus,PassWord) values ('{0}','{1}','{2}',{3},{4},'正常','{5}')", ry.LoginName, ry.UserName, ry.AreaCode, ry.IntDepartmentID, ry.IntRoleID, MD5.Md5Encrypt("1"));
+           
+            //添加部门名称和权限名称
+            string mSql = string.Format("insert into t_users(loginname,UserName,userChar,IntDepartmentID,IntRoleID,userstatus,PassWord,DepartmentName,OperRight) values ('{0}','{1}','{2}',{3},{4},'正常','{5}','{6}','{7}')", ry.LoginName, ry.UserName, ry.AreaCode, ry.IntDepartmentID, ry.IntRoleID, MD5.Md5Encrypt("1"),ry.DepartmentName,ry.OperRight);
+           
+
+            
             ret = SqlHelper.ExecuteNonQuery(mSql);
             if (ret > 0)
             {
@@ -515,6 +524,10 @@ namespace 销售管理.Main
             public int IntDepartmentID;
             public long ID;
             public int IntRoleID;
+
+            //添加部门名称，和权限名称
+            public string DepartmentName;
+            public string OperRight;
         }
 
         private void tsbRYDel_Click(object sender, EventArgs e)
