@@ -589,6 +589,10 @@ namespace 销售管理.Main
             ry.IntDepartmentID = Convert.ToInt32(cmbDepart.SelectedValue);
             ry.IntRoleID = Convert.ToInt32(cmbRole.SelectedValue);
 
+            ry.DepartmentName = cmbDepart.Text.Trim(); //部门名称
+            ry.OperRight = cmbRole.Text.Trim();//权限名称
+
+
             int ret = Convert.ToInt32(SqlHelper.ExecuteScalar(string.Format("select count(1) from t_users where loginName='{0}' and id <> {1}", ry.LoginName,ry.ID)));
             if (ret > 0)
             {
@@ -603,7 +607,12 @@ namespace 销售管理.Main
                 Dlg.ShowErrorInfoAndHelp("员工admin不允许修改！");
                 return;
             }
-            string mSql = string.Format("update t_users set loginName='{0}',UserName='{1}',userChar='{2}',intdepartmentID='{3}',IntRoleID={4} where id='{5}'", ry.LoginName, ry.UserName, ry.AreaCode,ry.IntDepartmentID,ry.IntRoleID,ry.ID);
+           
+            //string mSql = string.Format("update t_users set loginName='{0}',UserName='{1}',userChar='{2}',intdepartmentID='{3}',IntRoleID={4} where id='{5}'", ry.LoginName, ry.UserName, ry.AreaCode,ry.IntDepartmentID,ry.IntRoleID,ry.ID);
+           
+            //添加部门名称和权限名称字段
+            string mSql = string.Format("update t_users set loginName='{0}',UserName='{1}',userChar='{2}',intdepartmentID='{3}',IntRoleID={4},DepartmentName='{6}',OperRight='{7}' where id='{5}'", ry.LoginName, ry.UserName, ry.AreaCode, ry.IntDepartmentID, ry.IntRoleID, ry.ID, ry.DepartmentName, ry.OperRight);
+           
             ret = SqlHelper.ExecuteNonQuery(mSql);
             if (ret > 0)
             {
